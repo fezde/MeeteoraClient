@@ -1,11 +1,8 @@
-var mapId = "1f5586d3c03c4f56bdfc459de560eeee";
-var userId = "-1";
-var userName = "";
+var mapId = null;
+var userId = null;
+var userName = null;
 
-function debug(msg){
-    //console.log(new Date() + " - " + msg);
-    console.log(msg);
-}
+
 
 function updateMyPosition() {
     debug("Start updating my position position");
@@ -19,7 +16,21 @@ function updateMyPosition() {
 
 function positionsRequest(position){
     debug("Requesting positions");
-
+    if(mapId === null){
+        debug("MapID not yet set => do not request positions");
+        window.setTimeout(updateMyPosition,5000);
+        return;
+    }
+    if(userId === null){
+        debug("userId not yet set => do not request positions");
+        window.setTimeout(updateMyPosition,5000);
+        return;
+    }
+    if(userName === null){
+        debug("userName not yet set => do not request positions");
+        window.setTimeout(updateMyPosition,5000);
+        return;
+    }
     var url = "https://beta.meeteora.com/api/v1/maps/"+mapId+"/positions/";
     var data = {
         "lat": position.coords.latitude,
@@ -68,6 +79,7 @@ function userIdRequest(){
         $.post({
             url: "https://beta.meeteora.com/api/v1/users/",
             success: userIdSuccess,
+            //TODO add errorhandling (msg? retry?)
         });
     }else{
         userId = uidFromCookie;
@@ -105,4 +117,35 @@ function randomString() {
     }
     debug("RandomString => " + text);
     return text;
+}
+
+function initMapId(){
+    if(mapId === null){
+        var mapIdFromUrl = getUrlParameter('mapid');
+        if(mapIdFromUrl === undefined){
+            mapIdRequest();
+            return;
+        }else{
+            debug("MapID was set by URL")
+        }
+        mapId = mapIdFromUrl;
+    }else{
+        debug("MapID already set")
+
+    }
+    //TODO show "What is this info" because user joined this map and might not know what is going on
+    debug("MapID: " + mapId);
+}
+
+function mapIdRequest(){
+    debug("Requesting new MapId");
+    $.post({
+        url: "https://beta.meeteora.com/api/v1/maps/",
+        success: mapIdSuccess,
+        //TODO add errorhandling (msg? retry?)
+    });
+}
+function mapIdSuccess(data){
+    mapId = data.mapid;
+    debug("New Map ID is: " + mapId)
 }
