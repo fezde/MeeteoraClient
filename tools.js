@@ -17,3 +17,18 @@ var getUrlParameter = function getUrlParameter(sParam) {
     }
 };
 
+function setSharingUrl(){
+    if(addthis !== undefined){
+        var url = window.location.href;
+        if(url.includes("mapid")){
+            return;
+        }
+        var delim = "?";
+        if(url.includes("?")){
+            delim = "&";
+        }
+        url = url + delim + "mapid=" + mapId;
+        debug("New sharing URL: " + url);
+        addthis.update('share', 'url', url);
+    }
+}

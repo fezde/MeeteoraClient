@@ -6,6 +6,8 @@ var userName = null;
 
 function updateMyPosition() {
     debug("Start updating my position position");
+
+
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(positionsRequest);
     } else {
@@ -31,6 +33,7 @@ function positionsRequest(position){
         window.setTimeout(updateMyPosition,5000);
         return;
     }
+    setSharingUrl();
     var url = "https://beta.meeteora.com/api/v1/maps/"+mapId+"/positions/";
     var data = {
         "lat": position.coords.latitude,
@@ -149,3 +152,4 @@ function mapIdSuccess(data){
     mapId = data.mapid;
     debug("New Map ID is: " + mapId)
 }
+
