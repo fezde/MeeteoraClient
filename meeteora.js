@@ -1,5 +1,6 @@
 var mapId = "1f5586d3c03c4f56bdfc459de560eeee";
 var userId = "-1";
+var userName = "";
 
 function debug(msg){
     //console.log(new Date() + " - " + msg);
@@ -24,8 +25,10 @@ function positionsRequest(position){
         "lat": position.coords.latitude,
         "lng": position.coords.longitude,
         "userid": userId,
-        "name": "FEZ"
+        "name": userName
     };
+    debug("Updating");
+    debug(data);
     $.post({
         url: url,
         contentType:"application/json",
@@ -60,7 +63,7 @@ function positionsRender(data){
 function userIdRequest(){
     uidFromCookie = Cookies.get("MEETEORA_UID");
     debug("UID from cookie: " + uidFromCookie);
-    if(uidFromCookie == null){
+    if(uidFromCookie === undefined){
 
         $.post({
             url: "https://beta.meeteora.com/api/v1/users/",
@@ -78,4 +81,28 @@ function userIdSuccess(data){
     debug("userId is " + userId)
     uidFromCookie = Cookies.set("MEETEORA_UID", userId);
     updateMyPosition();
+}
+
+function initName(){
+    var name = Cookies.get("MEETEORA_NAME");
+    debug("Name from cookie: " + name);
+    if(name === undefined){
+        name = randomString();
+    }else{
+        debug("Name read from cookie");
+    }
+    debug("Name is: " + name);
+    userName = name;
+    Cookies.set("MEETEORA_NAME", name);
+}
+
+function randomString() {
+    var text = "";
+    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+
+    for (var i = 0; i < 5; i++){
+        text += possible.charAt(Math.floor(Math.random() * possible.length));
+    }
+    debug("RandomString => " + text);
+    return text;
 }

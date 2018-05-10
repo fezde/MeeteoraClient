@@ -7,6 +7,7 @@ function initMap(){
           zoom: 8
         });
      console.log("Map sollte da sein");
+     initName();
      userIdRequest();
 }
 
