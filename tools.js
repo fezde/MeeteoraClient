@@ -17,6 +17,18 @@ var getUrlParameter = function getUrlParameter(sParam) {
     }
 };
 
+function randomString() {
+    var text = "";
+    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+
+    for (var i = 0; i < 5; i++){
+        text += possible.charAt(Math.floor(Math.random() * possible.length));
+    }
+    debug("RandomString => " + text);
+    return text;
+}
+
+
 function setSharingUrl(){
     if(addthis !== undefined){
         var url = window.location.href;
