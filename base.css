@@ -2,6 +2,10 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+    font-family: Barlow, sans-serif;
+    font-size: 18px;
+    background-color: #1B1437;
+    color: white;
 }
 
 #map{
@@ -9,7 +13,17 @@ html, body {
     height: 100%;
 }
 
+#map .loading {
+    width: 50vw;
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
 #error, #info{
+    color: #1B1437;
     width: 90vw;
     height: 90vh;
     display: none;
@@ -17,6 +31,8 @@ html, body {
     top: 5vh;
     left: 5vw;
     background: white;
+    border-radius: 15px;
+    text-align: center;
 }
 #error {
     border: 5px solid red;
