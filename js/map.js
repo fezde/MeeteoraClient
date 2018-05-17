@@ -45,10 +45,21 @@ function markersAdd(lat, lng, name) {
         lat: lat,
         lng: lng
     };
+
+    var icon = {
+        url: "/img/meeteora-bubble.svg", // url
+        scaledSize: new google.maps.Size(50, 50), // scaled size
+        origin: new google.maps.Point(-5,3), // origin
+        anchor: new google.maps.Point(0, 0) // anchor
+    };
+
     var marker = new google.maps.Marker({
         position: pos,
         map: map,
-        label: name
+        label: name,
+        icon: icon
+        //icon: '/img/meteor-only.png'
+        //icon: image
     });
     markers.push(marker);
 }
