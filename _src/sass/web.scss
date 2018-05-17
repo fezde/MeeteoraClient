@@ -19,7 +19,7 @@ body {
     text-align: center;
 
 
-    @include gradient($COL_METEORA_DARK, lighten($COL_METEORA_DARK,5%), url("/img/meteor-only.png"));
+    @include gradient($COL_METEORA_DARK, lighten($COL_METEORA_DARK,5%), url("../img/meteor-only.png"));
     background-size: auto 100%;
     background-repeat: no-repeat;
 
@@ -62,7 +62,7 @@ p.lead::first-letter {
         position: absolute;
 
         //background: green;
-        content: url("/img/meeteora-bubble.svg") " ";
+        content: url("../img/meeteora-bubble.svg") " ";
         transform: translate(-66%, -33%) scale(0.2);
 
     }

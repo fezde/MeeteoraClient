@@ -47,7 +47,7 @@ function markersAdd(lat, lng, name) {
     };
 
     var icon = {
-        url: "/img/meeteora-bubble.svg", // url
+        url: "img/meeteora-bubble.svg", // url
         scaledSize: new google.maps.Size(50, 50), // scaled size
         origin: new google.maps.Point(-5,3), // origin
         anchor: new google.maps.Point(0, 0) // anchor
@@ -58,8 +58,6 @@ function markersAdd(lat, lng, name) {
         map: map,
         label: name,
         icon: icon
-        //icon: '/img/meteor-only.png'
-        //icon: image
     });
     markers.push(marker);
 }
