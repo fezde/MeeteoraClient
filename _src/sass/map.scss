@@ -1,0 +1,97 @@
+@import "variables";
+
+
+html {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Barlow, sans-serif;
+    font-size: 18px;
+    line-height: 1.3rem;
+    background-color: $COL_METEORA_DARK;
+
+    color: white;
+}
+
+#map{
+    width:100%;
+    height: 100%;
+    //
+}
+
+#map .loading {
+    width: 50vw;
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.modal{
+    color: $COL_METEORA_DARK;
+    width: 90vw;
+    height: 90vh;
+    display: none;
+    position: absolute;
+    top: 5vh;
+    left: 5vw;
+    background: white;
+    border-radius: 15px;
+    text-align: center;
+
+    background-image: url("/img/meteor-only.png");
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: auto 100%;
+}
+.modal.error {
+
+}
+.modal.info {
+}
+
+.modal .headline {
+    margin: 10px 0 0px 0;
+    color: red;
+    font-size: 2em;
+    line-height: 1.3em;
+    font-weight: bolder;
+}
+.modal .content{
+    margin: 0 5vw 3em 5vw;
+    text-align: justify;
+}
+
+button{
+    display: inline-block;
+    background: $COL_METEORA_DARK;
+    border: none;
+    color: $COL_MEETEORA_PINK;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: .95rem;
+    padding: .7rem 1rem;
+    border-radius: 3px;
+    min-width: 30vw;
+}
+.modal a {
+    margin:  0 10px 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+    color: $COL_MEETEORA_PINK;
+}
+
+.meeteora_starter {
+    font-family: serif;
+    color: red;
+}

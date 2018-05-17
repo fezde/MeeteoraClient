@@ -1,45 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meeteora</title>
-    <link rel="stylesheet" type="text/css" href="base.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="@meeteora ()">
+
     <link rel="icon" type="image/png" href="img/favicon-32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="img/favicon-100.png" sizes="100x100">
     <link rel="icon" type="image/png" href="img/favicon-200.png" sizes="200x200">
     <link rel="apple-touch-icon-precomposed" sizes="200x200" href="img/favicon-200.png">
     <link href="https://fonts.googleapis.com/css?family=Barlow" rel="stylesheet">
-   <script
-      src="https://code.jquery.com/jquery-3.3.1.min.js"
-      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-      crossorigin="anonymous"></script>
+
+    <title>meeteora.com</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+
+    <link href="https://fonts.googleapis.com/css?family=Barlow" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/css/web.css">
 </head>
+
+
 <body>
-    <div id="map">
-        <div class="loading"><h1>
-            Loading map
-        </h1></div>
-    </div>
-    <div id="error">
-        <h1 class="headline"></h1>
-        <p class="content"></p>
-    </div>
-    <div id="info">
-        <h1 class="headline"></h1>
-        <p class="content"></p>
-        <a href="#" class="button">Continue</a>
-    </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
-    <script src="tools.js"></script>
-    <script src="map.js"></script>
-    <script src="meeteora.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZBoTd4MV-dyqicuLP2sgNBNp9_bFki3I&callback=googleApiLoaded" async defer></script>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Disabled</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdown01">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
 
-    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-59c26918b0ec4303"></script>
+    <main role="main" class="container-fluid">
+
+        <div class="row meeteora_starter">
+            <div class="col">
+                <h1>meeteora.com</h1>
+
+
+            <p>Your <br/>
+                <strong>data savvy</strong> <br/>
+                <em>no-login-required</em> <br/>
+                location sharing service</p>
+            </div>
+
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-sm-8 col-md-10">
+                <p class="lead">Ever wanted to know where all you buddies are when you are waiting for them? Tired of driving as a convoy on the highway?</p>
+                <p class="lead">Not trusting the big players with your data? But still wanting to share your location with others - without leaving a data-trail larger than the milkyway?</p>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-sm-8 col-md-10">
+                <h1>Start your meeteora map now</h1>
+                <p>
+                    <ol>
+                        <li>Click button below</li>
+                        <li>Invite friends using sharing functionalities</li>
+                        <li>Give permission to access your location</li>
+                        <li>See where your friends are in real-time</li>
+                    </ol>
+                </p>
+                <p>
+
+                    <center><a href="/map.html" class="btn btn-primary">Start Map</a></center>
+                </p>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-sm-8 col-md-10">
+                <h1>Want to learn more?</h1>
+                <p>
+                    <ul>
+                        <li>How does it work - I want the details?</li>
+                        <li>What about <strong>my</strong> data? What are you storing and why?</li>
+                        <li>Give permission to access your location</li>
+                        <li>See where your friends are in real-time</li>
+                    </ul>
+                </p>
+
+            </div>
+        </div>
+    </main>
+    <!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
 
 </body>
 </html>

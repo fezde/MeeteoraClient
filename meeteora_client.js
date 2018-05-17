@@ -1,7 +1,77 @@
+var markers = [];
+var map = null;
+var apiLoaded = false;
+
+function googleApiLoaded() {
+    debug("Google API finished loading");
+    apiLoaded = true;
+}
+
+/**
+* TODO
+**/
+function initMap(position) {
+    if(!apiLoaded){
+        debug("Maps API not yet loaded. Need to wait");
+        window.setTimeout(initMap,500);
+    }else{
+        debug("Maps API loaded!");
+    }
+    map = new google.maps.Map(document.getElementById('map'), {
+        center: {
+            lat: position.coords.latitude,
+            lng: position.coords.longitude
+        },
+        zoom: 14,
+        minZoom: 6,
+        maxZoom: 15,
+        disableDefaultUI: true
+    });
+    debug("Map sollte da sein");
+    markersAdd(position.coords.latitude, position.coords.longitude, userName);
+    debug("you where added");
+}
+
+function markersRemoveAll() {
+    for (var i = 0; i < markers.length; i++) {
+        markers[i].setMap(null);
+    }
+    markers = [];
+}
+
+
+function markersAdd(lat, lng, name) {
+    var pos = {
+        lat: lat,
+        lng: lng
+    };
+    var marker = new google.maps.Marker({
+        position: pos,
+        map: map,
+        label: name
+    });
+    markers.push(marker);
+}
+
+function fitBoundsToVisibleMarkers() {
+
+    var bounds = new google.maps.LatLngBounds();
+
+    for (var i=0; i<markers.length; i++) {
+        bounds.extend( markers[i].getPosition() );
+    }
+
+    map.fitBounds(bounds);
+
+}
+"use strict";
+//import {debug} from "tools";
+
 var COOKIE_NAME_UID = "SUERID";
 var COOKIE_NAME_NAME = "USERNAM";
 var PARAM_MAP_ID = "mapid";
 var TIMEOUT = 5000;
+var BASE_URL = "https://beta.meeteora.com/api/v1/";
 
 var mapId = null;
 var userId = null;
@@ -9,7 +79,7 @@ var userName = null;
 
 loadMapId();
 
-function loadMapId(){
+function loadMapId() {
     var promiseMapId = new Promise(function(resolve, reject) {
         // Load mapid
         debug("Loading MAP ID");
@@ -17,7 +87,7 @@ function loadMapId(){
         if(mapIdFromUrl === undefined){
             debug("Requesting new MapId");
             $.post({
-                url: "https://beta.meeteora.com/api/v1/maps/",
+                url: BASE_URL + "maps/",
                 timeout: TIMEOUT,
 
             })
@@ -31,7 +101,7 @@ function loadMapId(){
                 reject(new Error(xhr));
             });
 
-        }else{
+        } else {
             debug("MapID was set by URL");
             debug("User is joining a map => show info");
             $("#info .headline").html("You are joining a meeteora map");
@@ -62,13 +132,13 @@ function loadMapId(){
 
 function loadUserId(){
     var promiseUserId = new Promise(function(resolve, reject) {
-        uidFromCookie = Cookies.get(COOKIE_NAME_UID);
+        var uidFromCookie = Cookies.get(COOKIE_NAME_UID);
         debug("UID from cookie: " + uidFromCookie);
         if(uidFromCookie === undefined){
             // UserID not stored in cookie
             debug("Before userID request");
             $.post({
-                url: "https://beta.meeteora.com/api/v1/users/",
+                url: BASE_URL + "users/",
                 timeout: TIMEOUT,
             })
             .done(function(data){
@@ -114,24 +184,25 @@ function loadName(){
 }
 
 function loadLocationPermission(){
-
-
+    debug("Trying to get position");
+    var modal = $("#info_permission_required_en");
     navigator.geolocation.getCurrentPosition(function(position) {
         debug("Could get position");
         debug(position);
         loadName();
         initMap(position);
-        //fitBoundsToVisibleMarkers();
+
+        modal.css("display","none");
     },
     function (error) {
 
         debug("you denied me :-(");
         debug(error);
-        $("#info .headline").html("Permission required");
-        $("#info .content").html("info");
-        $("#info").css("display","block");
-        $("#info .button").html("Retry");
-        $("#info .button").click(function(){
+
+        modal.css("display","block");
+
+        $("button", modal).click(function(){
+            debug("Click");
             loadLocationPermission();
         });
 
@@ -140,3 +211,4 @@ function loadLocationPermission(){
         timeout: 5000,
     });
 }
+

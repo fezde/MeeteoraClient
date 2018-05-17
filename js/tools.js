@@ -1,4 +1,7 @@
 function debug(msg){
+    if(msg === undefined){
+        msg = "null";
+    }
     console.log(msg);
 }
 

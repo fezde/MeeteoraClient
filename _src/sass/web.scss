@@ -1,0 +1,53 @@
+@import "variables";
+
+body {
+    background-color: $COL_METEORA_DARK;
+    font-family: Barlow, sans-serif;
+    color: white;
+
+
+}
+
+.row{
+    margin-bottom: 4rem;
+}
+
+.meeteora_starter {
+    padding: 5rem 0;
+
+    min-height: 30vh;
+    text-align: center;
+
+
+    @include gradient($COL_METEORA_DARK, lighten($COL_METEORA_DARK,5%), url("/img/meteor-only.png"));
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+
+    h1{
+        margin-bottom: 2.3em;
+        line-height: 1em;
+        font-weight: 900;
+        text-shadow: 0px 0px 7px $COL_MEETEORA_PINK;
+    }
+
+    p{
+        font-size: 1.8em;
+    }
+}
+
+p.lead::first-letter {
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: $COL_MEETEORA_PINK;
+    text-shadow: 0px 0px 7px $COL_MEETEORA_TURQUOISE;
+
+
+    float: left;
+
+    font-weight: bold;
+    line-height: 1rem;
+    padding-top: 0.3rem;
+    padding-right: 5px;
+    padding-left: 0px;
+
+}

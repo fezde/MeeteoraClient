@@ -1,0 +1,45 @@
+body {
+  background-color: #1B1437;
+  font-family: Barlow, sans-serif;
+  color: white; }
+
+.row {
+  margin-bottom: 4rem; }
+
+.meeteora_starter {
+  padding: 5rem 0;
+  min-height: 30vh;
+  text-align: center;
+  background: #1B1437;
+  /* Old browsers */
+  background: url("/img/meteor-only.png");
+  background: url("/img/meteor-only.png"), -moz-linear-gradient(top, #1B1437 0%, #241b4a 100%);
+  /* FF3.6-15 */
+  background: url("/img/meteor-only.png"), -webkit-linear-gradient(top, #1B1437 0%, #241b4a 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: url("/img/meteor-only.png"), linear-gradient(to bottom, #1B1437 0%, #241b4a 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$from', endColorstr='$to',GradientType=0 );
+  background-size: auto 100%;
+  background-repeat: no-repeat; }
+  .meeteora_starter h1 {
+    margin-bottom: 2.3em;
+    line-height: 1em;
+    font-weight: 900;
+    text-shadow: 0px 0px 7px #F95DE3; }
+  .meeteora_starter p {
+    font-size: 1.8em; }
+
+p.lead::first-letter {
+  font-size: 2.5rem;
+  font-weight: bolder;
+  color: #F95DE3;
+  text-shadow: 0px 0px 7px #40D4CD;
+  float: left;
+  font-weight: bold;
+  line-height: 1rem;
+  padding-top: 0.3rem;
+  padding-right: 5px;
+  padding-left: 0px; }
+
+/*# sourceMappingURL=web.css.map */

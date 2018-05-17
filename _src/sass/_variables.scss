@@ -1,0 +1,12 @@
+$COL_METEORA_DARK: #1B1437;
+$COL_MEETEORA_PINK: #F95DE3;
+$COL_MEETEORA_TURQUOISE: #40D4CD;
+
+@mixin gradient($from, $to, $img){
+    background: $from; /* Old browsers */
+    background: $img;
+    background: $img, -moz-linear-gradient(top, $from 0%, $to 100%); /* FF3.6-15 */
+    background: $img, -webkit-linear-gradient(top, $from 0%, $to 100%); /* Chrome10-25,Safari5.1-6 */
+    background: $img, linear-gradient(to bottom, $from 0%,$to 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$from', endColorstr='$to',GradientType=0 );
+}

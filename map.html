@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meeteora</title>
+
+    <link rel="icon" type="image/png" href="img/favicon-32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="img/favicon-100.png" sizes="100x100">
+    <link rel="icon" type="image/png" href="img/favicon-200.png" sizes="200x200">
+    <link rel="apple-touch-icon-precomposed" sizes="200x200" href="img/favicon-200.png">
+    <link href="https://fonts.googleapis.com/css?family=Barlow" rel="stylesheet">
+   <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Barlow" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/css/map.css">
+</head>
+<body>
+    <div id="map">
+        <div class="loading"><h1>
+            Loading map
+        </h1></div>
+    </div>
+    <div class="modal error" id="error">
+        <div class="headline"> </div>
+        <p class="content"></p>
+    </div>
+    <div class="modal info" id="info_permission_required_en">
+        <div class="headline">
+            Location permission required
+        </div>
+        <div class="content">
+            <p>As meeteora is a location based service we need permission to access your current <strong>location</strong>. <a href="" target="_blank">[more...]</a></p>
+            <p>By now your browser should have asked you to grant acces to your current permission. Please accept this permission and hit the retry button below.</p>
+        </div>
+        <div class="buttons">
+            <a href="" target="_blank">About meeteora</a>
+            <a href="" target="_blank">Location Permission?</a>
+            <a href="" target="_blank">Data Protection!</a>
+            <p>
+                <button>Retry</button>
+            </p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+    <script src="/js/tools.js"></script>
+    <script src="/js/map.js"></script>
+    <script src="/js/meeteora.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZBoTd4MV-dyqicuLP2sgNBNp9_bFki3I&callback=googleApiLoaded" async defer></script>
+
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-59c26918b0ec4303"></script>
+
+</body>
+</html>

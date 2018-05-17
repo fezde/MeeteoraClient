@@ -7,6 +7,9 @@ function googleApiLoaded() {
     apiLoaded = true;
 }
 
+/**
+* TODO
+**/
 function initMap(position) {
     if(!apiLoaded){
         debug("Maps API not yet loaded. Need to wait");
