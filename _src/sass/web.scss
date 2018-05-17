@@ -51,3 +51,19 @@ p.lead::first-letter {
     padding-left: 0px;
 
 }
+
+.meeteora-ul{
+
+    list-style-type:none;
+    li{
+        line-height: 1.7rem;
+    }
+    li::before {
+        position: absolute;
+
+        //background: green;
+        content: url("/img/meeteora-bubble.svg") " ";
+        transform: translate(-66%, -33%) scale(0.2);
+
+    }
+}

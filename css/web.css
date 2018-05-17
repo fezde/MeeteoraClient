@@ -42,4 +42,13 @@ p.lead::first-letter {
   padding-right: 5px;
   padding-left: 0px; }
 
+.meeteora-ul {
+  list-style-type: none; }
+  .meeteora-ul li {
+    line-height: 1.7rem; }
+  .meeteora-ul li::before {
+    position: absolute;
+    content: url("/img/meeteora-bubble.svg") " ";
+    transform: translate(-66%, -33%) scale(0.2); }
+
 /*# sourceMappingURL=web.css.map */
