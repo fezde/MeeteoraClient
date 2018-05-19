@@ -12,7 +12,10 @@ var mapId = null;
 var userId = null;
 var userName = null;
 
+
+
 loadMapId();
+
 
 function loadMapId() {
     var promiseMapId = new Promise(function(resolve, reject) {

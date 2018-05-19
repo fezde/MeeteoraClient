@@ -77,4 +77,23 @@ button {
   font-family: serif;
   color: red; }
 
+#debug_output_box {
+  border: 1px solid red;
+  padding: 5px;
+  font-family: monospace;
+  color: black;
+  font-size: 0.7em;
+  background: white;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 30vh;
+  width: 70vw;
+  z-index: 1000;
+  overflow: scroll; }
+  #debug_output_box p {
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid grey; }
+
 /*# sourceMappingURL=map.css.map */

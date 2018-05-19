@@ -1,8 +1,21 @@
+"use strict";
+
+var DEBUG_MODE = 0;
 function debug(msg){
     if(msg === undefined){
         msg = "null";
     }
-    console.log(msg);
+
+    switch(DEBUG_MODE){
+        case "1":
+            // only console
+            console.log(msg);
+            break;
+        case "2":
+            console.log(msg);
+            $("#debug_output_box").append("<p>" + JSON.stringify(msg) + "</p>");
+            break;
+    }
 }
 
 var getUrlParameter = function getUrlParameter(sParam) {
@@ -20,6 +33,9 @@ var getUrlParameter = function getUrlParameter(sParam) {
     }
 };
 
+/**
+* Creates a random String of length 5
+**/
 function randomString() {
     var text = "";
     var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
@@ -47,3 +63,6 @@ function setSharingUrl(){
         addthis.update('share', 'url', url);
     }
 }
+
+DEBUG_MODE = getUrlParameter("debug");
+debug("Debug mode set to " + DEBUG_MODE);
