@@ -102,4 +102,11 @@ footer {
   .meeteora-navbar .dropdown-item {
     color: white; }
 
+#meeteora-map-btn {
+  color: #F95DE3;
+  font-weight: 900;
+  padding: 10px 20px 10px 20px;
+  border-width: 2px;
+  border-color: #F95DE3; }
+
 /*# sourceMappingURL=web.css.map */
