@@ -7,7 +7,6 @@ body {
   margin-bottom: 4rem; }
 
 .meeteora_starter {
-  padding-top: 2rem;
   padding-bottom: 5rem;
   min-height: 30vh;
   text-align: center;
@@ -74,5 +73,33 @@ footer {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$from', endColorstr='$to',GradientType=0 );
   background-size: auto 100%;
   background-repeat: no-repeat; }
+
+.meeteora_first_row {
+  padding-top: 5rem; }
+
+.meeteora-navbar {
+  background: #1B1437;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #1B1437 0%, #241b4a 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #1B1437 0%, #241b4a 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #1B1437 0%, #241b4a 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$from', endColorstr='$to',GradientType=0 );
+  box-shadow: 0px 0px 10px white; }
+  .meeteora-navbar .dropdown-menu {
+    background: #1B1437;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #1B1437 0%, #241b4a 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #1B1437 0%, #241b4a 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #1B1437 0%, #241b4a 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$from', endColorstr='$to',GradientType=0 );
+    color: white; }
+  .meeteora-navbar .dropdown-item {
+    color: white; }
 
 /*# sourceMappingURL=web.css.map */
