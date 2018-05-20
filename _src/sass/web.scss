@@ -13,7 +13,8 @@ body {
 }
 
 .meeteora_starter {
-    padding: 5rem 0;
+    padding-top: 2rem;
+    padding-bottom: 5rem ;
 
     min-height: 30vh;
     text-align: center;
@@ -57,13 +58,28 @@ p.lead::first-letter {
     list-style-type:none;
     li{
         line-height: 1.7rem;
+
     }
-    li::before {
+    /*
+    li:before {
         position: absolute;
 
         //background: green;
         content: url("../img/meeteora-bubble.svg") " ";
         transform: translate(-66%, -33%) scale(0.2);
 
-    }
+
+    }*/
+}
+
+footer {
+    padding: 1rem;
+
+    min-height: 10rem;
+    text-align: center;
+
+
+    @include gradient(lighten($COL_METEORA_DARK,5%), $COL_METEORA_DARK, url("../img/meteor-only.png"));
+    background-size: auto 100%;
+    background-repeat: no-repeat;
 }

@@ -19,44 +19,14 @@
 
 
     <link href="https://fonts.googleapis.com/css?family=Barlow" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/overwrite.css">
     <link rel="stylesheet" type="text/css" href="css/web.css">
 </head>
 
 
 <body>
 
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
 
-        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Disabled</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                    <div class="dropdown-menu" aria-labelledby="dropdown01">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                </li>
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
-        </div>
-    </nav>
 
     <main role="main" class="container-fluid">
 
@@ -84,17 +54,17 @@
             <div class="col-sm-8 col-md-10">
                 <h1>Start your meeteora map now</h1>
                 <p>
-                    <ol>
-                        <li>Click button below</li>
-                        <li>Invite friends using sharing functionalities</li>
-                        <li>Give permission to access your location</li>
-                        <li>See where your friends are in real-time</li>
+                    <ol class="list-group">
+                        <li class="list-group-item">1. Click button below</li>
+                        <li class="list-group-item">2. Invite friends using sharing functionalities</li>
+                        <li class="list-group-item">3. Give permission to access your location</li>
+                        <li class="list-group-item">4. See where your friends are in real-time</li>
                     </ol>
                 </p>
                 <p>
 
                     <center>
-                        <a href="map.html" class="btn btn-primary">
+                        <a href="map.html" class="btn btn-outline-primary">
                             <img height="30" src="img/meeteora-bubble.svg"/>Start Map
                         </a></center>
                 </p>
@@ -105,17 +75,36 @@
             <div class="col-sm-8 col-md-10">
                 <h1>Want to learn more?</h1>
                 <p>
-                    <ul class="meeteora-ul">
-                        <li>How does it work - I want the details?</li>
-                        <li>What about <strong>my</strong> data? What are you storing and why?</li>
-                        <li>Give permission to access your location</li>
-                        <li>See where your friends are in real-time</li>
+                    <ul class="list-group meeteora-ul">
+                        <li class="list-group-item">How does it work - I want the details?</li>
+                        <li class="list-group-item">What about <strong>my</strong> data? What are you storing and why?</li>
+                        <li class="list-group-item">Get in touch with us on <a href="https://twitter.com/team_meeteora" target="_blank">twitter</a> or <a href="https://github.com/fezde/meeteoraclient" target="_blank">github</a>! We'd <strong>love</strong> to exchange ideas and input with you!</li>
                     </ul>
                 </p>
 
             </div>
         </div>
     </main>
+<footer role="footer" class="container-fluid">
+    <div class="row">
+        <div class="col">
+
+            <ul class="list-group">
+                <li class="list-group-item"><h4>About us</h4></li>
+                <li class="list-group-item"><a href="">Impressum</a></li>
+                <li class="list-group-item"><a href="https://twitter.com/team_meeteora" target="_blank">@meeteora</a></li>
+            </ul>
+        </div>
+        <div class="col">
+            <ul class="list-group">
+                <li class="list-group-item"><h4>Developers</h4></li>
+                <li class="list-group-item">Intro</li>
+                <li class="list-group-item"><a herf="https://beta.meeteora.com/api/doc/" target="_blank">API DOC</a></li>
+                <li class="list-group-item"><a href="https://github.com/fezde/meeteoraclient" target="_blank">github</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
     <!-- /.container -->
 
 

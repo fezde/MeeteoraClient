@@ -1,0 +1,10 @@
+.list-group-item {
+  background-color: #1B1437;
+  border: 1px solid white; }
+
+a, a:hover {
+  color: #F95DE3;
+  font-weight: bold;
+  text-decoration: underline; }
+
+/*# sourceMappingURL=overwrite.css.map */

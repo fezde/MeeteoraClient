@@ -1,0 +1,12 @@
+@import "variables";
+
+.list-group-item{
+    background-color: $COL_METEORA_DARK;
+    border: 1px solid white;
+}
+
+a, a:hover{
+    color: $COL_MEETEORA_PINK;
+    font-weight: bold;
+    text-decoration: underline;
+}
