@@ -14,12 +14,12 @@ body {
   text-align: center;
   background: #1B1437;
   /* Old browsers */
-  background: url("../img/meteor-only.png") "right -300px bottom";
-  background: url("../img/meteor-only.png") "right -300px bottom", -moz-linear-gradient(top, #1B1437 0%, #241b4a 100%);
+  background: url("../img/meteor-only.png") right -400px bottom;
+  background: url("../img/meteor-only.png") right -400px bottom, -moz-linear-gradient(top, #1B1437 0%, #241b4a 100%);
   /* FF3.6-15 */
-  background: url("../img/meteor-only.png") "right -300px bottom", -webkit-linear-gradient(top, #1B1437 0%, #241b4a 100%);
+  background: url("../img/meteor-only.png") right -400px bottom, -webkit-linear-gradient(top, #1B1437 0%, #241b4a 100%);
   /* Chrome10-25,Safari5.1-6 */
-  background: url("../img/meteor-only.png") "right -300px bottom", linear-gradient(to bottom, #1B1437 0%, #241b4a 100%);
+  background: url("../img/meteor-only.png") right -400px bottom, linear-gradient(to bottom, #1B1437 0%, #241b4a 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$from', endColorstr='$to',GradientType=0 );
   background-size: 100% auto;
@@ -66,12 +66,12 @@ footer {
   text-align: center;
   background: #241b4a;
   /* Old browsers */
-  background: url("../img/meteor-only.png") "top left";
-  background: url("../img/meteor-only.png") "top left", -moz-linear-gradient(top, #241b4a 0%, #1B1437 100%);
+  background: url("../img/meteor-only.png") top left;
+  background: url("../img/meteor-only.png") top left, -moz-linear-gradient(top, #241b4a 0%, #1B1437 100%);
   /* FF3.6-15 */
-  background: url("../img/meteor-only.png") "top left", -webkit-linear-gradient(top, #241b4a 0%, #1B1437 100%);
+  background: url("../img/meteor-only.png") top left, -webkit-linear-gradient(top, #241b4a 0%, #1B1437 100%);
   /* Chrome10-25,Safari5.1-6 */
-  background: url("../img/meteor-only.png") "top left", linear-gradient(to bottom, #241b4a 0%, #1B1437 100%);
+  background: url("../img/meteor-only.png") top left, linear-gradient(to bottom, #241b4a 0%, #1B1437 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$from', endColorstr='$to',GradientType=0 );
   background-size: auto 100%;

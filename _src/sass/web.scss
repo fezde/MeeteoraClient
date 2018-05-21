@@ -22,9 +22,8 @@ body {
     text-align: center;
 
 
-    @include gradient($COL_METEORA_DARK, lighten($COL_METEORA_DARK,5%), url("../img/meteor-only.png"), "right -300px bottom");
+    @include gradient($COL_METEORA_DARK, lighten($COL_METEORA_DARK,5%), url("../img/meteor-only.png"), right -400px bottom);
     background-size: 100% auto;
-    //background-position: right -100px bottom;
     background-repeat: no-repeat;
 
     h1{
@@ -83,7 +82,7 @@ footer {
     text-align: center;
 
 
-    @include gradient(lighten($COL_METEORA_DARK,5%), $COL_METEORA_DARK, url("../img/meteor-only.png"),"top left");
+    @include gradient(lighten($COL_METEORA_DARK,5%), $COL_METEORA_DARK, url("../img/meteor-only.png"),top left);
     background-size: auto 100%;
     background-repeat: no-repeat;
 }
