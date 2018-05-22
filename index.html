@@ -94,30 +94,7 @@
             </div>
         </div>
     </main>
-    <footer role="footer" class="container-fluid">
-        <div class="row">
-            <div class="col">
-
-                <ul class="list-group">
-                    <li class="list-group-item">
-                        <h4>About us</h4>
-                    </li>
-                    <li class="list-group-item"><a href="imprint_de.html">Impressum</a></li>
-                    <li class="list-group-item"><a href="https://twitter.com/team_meeteora" target="_blank">@team_meeteora</a></li>
-                </ul>
-            </div>
-            <div class="col">
-                <ul class="list-group">
-                    <li class="list-group-item">
-                        <h4>Developers</h4>
-                    </li>
-                    <li class="list-group-item">Intro</li>
-                    <li class="list-group-item"><a herf="https://beta.meeteora.com/api/doc/" target="_blank">API DOC</a></li>
-                    <li class="list-group-item"><a href="https://github.com/fezde/meeteoraclient" target="_blank">github</a></li>
-                </ul>
-            </div>
-        </div>
-    </footer>
+    <footer role="footer" class="container-fluid"></footer>
     <!-- /.container -->
 
 
@@ -133,6 +110,10 @@
             $.get('navigation.html', function(template) {
                 //var rendered = Mustache.render(template, {name: "Luke"});
                 $('nav').html(template);
+            });
+            $.get('footer.html', function(template) {
+                //var rendered = Mustache.render(template, {name: "Luke"});
+                $('footer').html(template);
             });
         });
 

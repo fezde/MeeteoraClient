@@ -100,7 +100,7 @@
 
     </main>
     <!-- /.container -->
-
+    <footer role="footer" class="container-fluid"></footer>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -114,12 +114,17 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
 
     <script>
-        $(document).ready(function(){
+        $(document).ready(function() {
             $.get('navigation.html', function(template) {
                 //var rendered = Mustache.render(template, {name: "Luke"});
                 $('nav').html(template);
             });
+            $.get('footer.html', function(template) {
+                //var rendered = Mustache.render(template, {name: "Luke"});
+                $('footer').html(template);
+            });
         });
+
     </script>
 </body>
 </html>
