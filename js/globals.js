@@ -1,2 +1,2 @@
-var COOKIE_NAME_UID = "SUERdID";
-var COOKIE_NAME_NAME = "USERNAM";
+var COOKIE_NAME_UID = "mc_uid";
+var COOKIE_NAME_NAME = "mc_uname";
