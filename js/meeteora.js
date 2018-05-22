@@ -2,7 +2,7 @@
 "use strict";
 //import {debug} from "tools";
 
-var COOKIE_NAME_UID = "SUERID";
+var COOKIE_NAME_UID = "SUERdID";
 var COOKIE_NAME_NAME = "USERNAM";
 var PARAM_MAP_ID = "mapid";
 var TIMEOUT = 5000;
@@ -40,6 +40,7 @@ function loadMapId() {
             });
 
         } else {
+            //TODO validate map id before we show something here
             debug("MapID was set by URL");
             debug("User is joining a map => show info");
 
@@ -63,9 +64,7 @@ function loadMapId() {
     })
     .catch(function(error){
         debug(error);
-        $("#error .headline").html("Network error");
-        $("#error .content").html("Could not load map ID. Please reload this page");
-        $("#error").css("display","block");
+        $("#error_mapid_en").css("display","block");
     });
 }
 
@@ -103,9 +102,7 @@ function loadUserId(){
     })
     .catch(function(error){
         debug(error);
-        $("#error .headline").html("Network error");
-        $("#error .content").html("Could not load user ID. Please reload this page");
-        $("#error").css("display","block");
+        $("#error_userid_en").css("display","block");
     });
 }
 
@@ -131,6 +128,8 @@ function loadLocationPermission(){
         loadName();
         initMap(position);
         debug("Now we can start the polling");
+        //show add this button
+        $(".at-expanding-share-button-toggle").css("display","block");
         window.setTimeout(updateMyPosition,5000);
         modal.css("display","none");
     },
@@ -162,7 +161,7 @@ var userName = null;
 
 
 function updateMyPosition() {
-    debug("Start updating my position position");
+    debug("Start updating my position position at " + (new Date()));
 
 
     if (navigator.geolocation) {
@@ -231,29 +230,6 @@ function positionsRender(data){
 }
 
 
-function userIdRequest(){
-    uidFromCookie = Cookies.get("MEETEORA_UID");
-    debug("UID from cookie: " + uidFromCookie);
-    if(uidFromCookie === undefined){
-
-        $.post({
-            url: "https://beta.meeteora.com/api/v1/users/",
-            success: userIdSuccess,
-            //TODO add errorhandling (msg? retry?)
-        });
-    }else{
-        userId = uidFromCookie;
-        updateMyPosition();
-    }
-}
-
-function userIdSuccess(data){
-    userId = data.userid;
-    //userId =
-    debug("userId is " + userId)
-    uidFromCookie = Cookies.set("MEETEORA_UID", userId);
-    updateMyPosition();
-}
 
 function initName(){
     var name = Cookies.get("MEETEORA_NAME");
@@ -267,40 +243,6 @@ function initName(){
     userName = name;
     Cookies.set("MEETEORA_NAME", name);
 }
-
-
-
-function initMapId(){
-    if(mapId === null){
-        var mapIdFromUrl = getUrlParameter('mapid');
-        if(mapIdFromUrl === undefined){
-            mapIdRequest();
-            return;
-        }else{
-            debug("MapID was set by URL")
-        }
-        mapId = mapIdFromUrl;
-    }else{
-        debug("MapID already set")
-
-    }
-    //TODO show "What is this info" because user joined this map and might not know what is going on
-    debug("MapID: " + mapId);
-}
-
-function mapIdRequest(){
-    debug("Requesting new MapId");
-    $.post({
-        url: "https://beta.meeteora.com/api/v1/maps/",
-        success: mapIdSuccess,
-        //TODO add errorhandling (msg? retry?)
-    });
-}
-function mapIdSuccess(data){
-    mapId = data.mapid;
-    debug("New Map ID is: " + mapId)
-}
-
 
 var markers = [];
 var map = null;

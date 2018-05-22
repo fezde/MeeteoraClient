@@ -48,9 +48,9 @@ function markersAdd(lat, lng, name) {
 
     var icon = {
         url: "img/meeteora-bubble.svg", // url
-        scaledSize: new google.maps.Size(50, 50), // scaled size
-        origin: new google.maps.Point(-5,3), // origin
-        anchor: new google.maps.Point(0, 0) // anchor
+        scaledSize: new google.maps.Size(55, 50), // scaled size
+        origin: new google.maps.Point(-5,4), // origin
+        anchor: new google.maps.Point(27, 25) // anchor
     };
 
     var marker = new google.maps.Marker({
@@ -60,6 +60,13 @@ function markersAdd(lat, lng, name) {
         icon: icon
     });
     markers.push(marker);
+
+//    marker = new google.maps.Marker({
+//        position: pos,
+//        map: map,
+//        label: name,
+//    });
+//    markers.push(marker);
 }
 
 function fitBoundsToVisibleMarkers() {

@@ -3,10 +3,13 @@ html {
   padding: 0;
   margin: 0; }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: inherit; }
 
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
   padding: 0;
@@ -41,15 +44,16 @@ html, body {
   text-align: center;
   background-image: url("../img/meteor-only.png");
   background-repeat: no-repeat;
-  background-position: bottom left;
-  background-size: auto 100%; }
+  background-position: top left;
+  background-size: 150px; }
 
 .modal .headline {
   margin: 10px 0 0px 0;
-  color: red;
+  color: #1B1437;
   font-size: 2em;
-  line-height: 1.3em;
-  font-weight: bolder; }
+  line-height: 1.1em;
+  font-weight: bold;
+  min-height: 60px; }
 
 .modal .content {
   margin: 0 5vw 3em 5vw;
@@ -68,10 +72,12 @@ button {
   min-width: 30vw; }
 
 .modal a {
-  margin: 0 10px 0 10px;
   text-decoration: none;
   font-weight: bold;
   color: #F95DE3; }
+
+.modal .buttons a {
+  margin: 0 10px 0 10px; }
 
 .meeteora_starter {
   font-family: serif;
