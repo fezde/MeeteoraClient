@@ -1,9 +1,5 @@
-
 "use strict";
-//import {debug} from "tools";
 
-var COOKIE_NAME_UID = "SUERdID";
-var COOKIE_NAME_NAME = "USERNAM";
 var PARAM_MAP_ID = "mapid";
 var TIMEOUT = 5000;
 var BASE_URL = "https://beta.meeteora.com/api/v1/";
