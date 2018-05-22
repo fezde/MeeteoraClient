@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="@meeteora ()">
+
+    <link rel="icon" type="image/png" href="img/favicon-32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="img/favicon-100.png" sizes="100x100">
+    <link rel="icon" type="image/png" href="img/favicon-200.png" sizes="200x200">
+    <link rel="apple-touch-icon-precomposed" sizes="200x200" href="img/favicon-200.png">
+    <link href="https://fonts.googleapis.com/css?family=Barlow" rel="stylesheet">
+
+    <title>Data Protection at meeteora.com</title>
+
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+    <!-- meeteora css -->
+    <link href="https://fonts.googleapis.com/css?family=Barlow" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/overwrite.css">
+    <link rel="stylesheet" type="text/css" href="css/web.css">
+</head>
+
+
+<body>
+
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top meeteora-navbar"></nav>
+
+    <main role="main" class="container-fluid">
+
+        <div class="row meeteora_first_row justify-content-center">
+            <div class="col-sm-8 col-md-6">
+                <h2>Our Data Protection Statement</h2>
+                <p class="lead">
+                    Data Protection is important for us. It is literally the main reason why we came up with meeteora in the first place. <br> This means we will try to store as little as possible data of you. But we cannot work without any data, this is why this page gives you the details on what we store and why.
+                </p>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-sm-12 col-md-10">
+                <h2>Data managed in cookies</h2>
+                <p>
+                    We use cookies to persist some data inside your browser so it can be used again when you use meeteora again. These cookies are only read by the javascript executed in the browser and never directly on the server. If data from cookies needs to be sent to the server, it is sent over the API requests (see <a href="#server">section below</a> for details).
+                </p>
+                <h3>Cookie Details</h3>
+                <p>
+                    <script src="js/globals.js"></script>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Cookie Name</th>
+                                <th>Content</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">
+                                    <script>
+                                        document.write(COOKIE_NAME_UID);
+
+                                    </script>
+                                </th>
+                                <td>This stores your user ID</td>
+                                <td>
+                                    <p>
+                                        We need a user ID to technically identify you inside our databases. Only this way we can ensure that the position updates your browser sends us update your position (and not the position of somebody else
+                                    </p>
+                                    <p>
+                                        When this cookie is not present, we need to assume, that you have never before used meeteora. In this case a new user ID gets generated for you on our servers.
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <script>
+                                        document.write(COOKIE_NAME_NAME);
+
+                                    </script>
+                                </th>
+                                <td>This stores the name you have set</td>
+                                <td>
+                                    <p>
+                                        Everybody on a meeteora map is shown as an icon and a short name. To automatically re-use the name you have last used, we need to remember it somewhere (in this cookie).
+                                    </p>
+                                    <p>
+                                        Initially your name gets created randomly (so that at least something is shown). Later on you can save change is by yourself.
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </p>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-sm-12 col-md-10">
+                <h2 id="server">Data sent to / from / stored on our servers</h2>
+                <p>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>What</th>
+                                <th>Action</th>
+                                <th>Details</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">User ID</th>
+                                <td>Stored on Server</td>
+                                <td>
+                                    Your user ID gets stored with your <strong>last known</strong> position on the server. We need to do this so we can send your current position to the other users.<br> If you are part of several maps your user ID will be stored several times.
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">User ID</th>
+                                <td>Sent from server</td>
+                                <td>
+                                    There are different occasions at which the server sends user IDs back to you.
+                                    <ul>
+                                        <li>Requesting a new user ID: As user IDs need to be unique, new ones need to be generated by the server. If you request one, the server will send one back... Just like requested ,-)</li>
+                                        <li>Getting updates to the current map: This happens to update the positions of all users on the current map. The answer will contain your user id (but not the IDs of other users).</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">User ID</th>
+                                <td>Sent to server</td>
+                                <td>We send your user ID (together with your current position and user name) to the server roughly every 5 seconds. This way wen can enable our almost realtime experience.</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Your Location</th>
+                                <td>Stored on server</td>
+                                <td>To be able to send updates to all members of a map we need to store the combination of your user ID, your user name, your current location and the map ID in our databases. <br/> We only store one recordset for you on any given map. This recordset contains only your last known positions. We deliberately do not store your trails or movements.</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Your Location</th>
+                                <td>Sent from server</td>
+                                <td>Your position is sent to all members of the same map so they can see who's where. Your location is sent in combination with the name you have set, but not in combination with your (unique) user ID.</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Your Location</th>
+                                <td>Sent to server</td>
+                                <td>We send your current position (together with your user ID and user name) to the server roughly every 5 seconds. This way wen can enable our almost realtime experience.</td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">Your User Name</th>
+                                <td>Stored on server</td>
+                                <td>
+                                    To be able to send updates to all members of a map we need to store the combination of your user ID, your user name, your current location and the map ID in our databases. <br/> We only store one recordset for you on any given map. This recordset contains only your last known positions. We deliberately do not store your trails or movements.
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Your User Name</th>
+                                <td>Sent from server</td>
+                                <td>Your user name is sent to all members of the same map so they can see who's where. Your user name is sent in combination with your current location, but not in combination with your (unique) user ID.</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Your Location</th>
+                                <td>Sent to server</td>
+                                <td>We send your user name (together with your user ID and current location) to the server roughly every 5 seconds. This way wen can enable our almost realtime experience.</td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">Map ID</th>
+                                <td>Sent from server</td>
+                                <td>
+                                    There are different occasions at which the server sends map IDs back to you.
+                                    <ul>
+                                        <li>Requesting a new map ID (aka creating a new map): As map IDs need to be unique, new ones need to be generated by the server. If you request one, the server will send one back... Just like requested ,-)</li>
+                                        <li>Getting positions on a map: To see people on a map, you need to know where they are. The response to such a request will contain the map ID of the map you requested the positions for.</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <!--
+                            <tr>
+                                <th scope="row"></th>
+                                <td>?</td>
+                                <td></td>
+                            </tr>
+                            -->
+
+                        </tbody>
+                    </table>
+                </p>
+                <p>
+                    <strong>Important: We do not store trails of your positions. Only your last known position gets stored.</strong>
+                </p>
+                <p>
+                    Everything we send to our servers (and back) happens over our API. You can find the <a href="https://beta.meeteora.com/api/doc" target="_blank">API DOC here</a>.
+                </p>
+            </div>
+        </div>
+
+
+
+        <div class="row justify-content-center">
+            <div class="col-sm-12 col-md-10">
+                <h2>Third party tools</h2>
+                <p>
+                    To save us some development time, we use third party tools in different places. For those that may store some of your data, we list their dataprotection links below.
+                </p>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-5">
+                <h4>AddThis</h4>
+                <p>
+                    We use AddThis to enable the sharing of maps. You find the accoring sharing functionality on every meeteora map on the bottom left indicated by this icon:<br/>
+                    <img src="img/dataprotection/addthis-sharing.png" height="50" />
+                </p>
+                <p>
+                    You may find The Privacy & Data Practices of AddThis here: <a href="https://www.addthis.com/privacy" target="_blank">https://www.addthis.com/privacy</a>
+                </p>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-5">
+                <h4>Google Maps API</h4>
+                <p>
+                    We use the Google Maps JavaScript API (Details <a href="https://developers.google.com/maps/documentation/javascript/" target="_blank">here</a>) to render the maps of meeteora.
+                </p>
+                <p>
+                    Even as we try to avaid as much data-storing and data-sending as possible, some data may be stored by google. Please see <a href="https://developers.google.com/maps/faq#tos_logging" target="_blank">this FAQ</a> and <a href="https://developers.google.com/maps/terms">Google's Terms of Service</a> for more details.
+                </p>
+            </div>
+        </div>
+
+    </main>
+    <footer role="footer" class="container-fluid"></footer>
+    <!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function() {
+            $.get('navigation.html', function(template) {
+                //var rendered = Mustache.render(template, {name: "Luke"});
+                $('nav').html(template);
+            });
+            $.get('footer.html', function(template) {
+                //var rendered = Mustache.render(template, {name: "Luke"});
+                $('footer').html(template);
+            });
+        });
+
+    </script>
+</body>
+
+</html>
