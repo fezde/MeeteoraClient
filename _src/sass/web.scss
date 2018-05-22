@@ -111,6 +111,12 @@ footer {
         lighten($COL_METEORA_DARK,
         5%));
     }
+    .nav-item .nav-link, .nav-item.active .nav-link, .dropdown-item, .nav-item.dropdown .nav-link  {
+        color: $COL_MEETEORA_PINK;
+    }
+    .nav-item .nav-link:hover, .dropdown-item:hover {
+        color: $COL_MEETEORA_TURQUOISE;
+    }
 }
 
 #meeteora-map-btn {

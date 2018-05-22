@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -13,6 +14,7 @@
     <link href="https://fonts.googleapis.com/css?family=Barlow" rel="stylesheet">
 
     <title>meeteora.com</title>
+
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
@@ -42,7 +44,7 @@
 
             <div class="col-sm-8 col-md-5 col-lg-3">
                 <p>
-                    <img src="img/handy-screenshot.png" width="250"/>
+                    <img src="img/handy-screenshot.png" width="250" />
                 </p>
             </div>
 
@@ -92,46 +94,49 @@
             </div>
         </div>
     </main>
-<footer role="footer" class="container-fluid">
-    <div class="row">
-        <div class="col">
+    <footer role="footer" class="container-fluid">
+        <div class="row">
+            <div class="col">
 
-            <ul class="list-group">
-                <li class="list-group-item"><h4>About us</h4></li>
-                <li class="list-group-item"><a href="imprint_de.html">Impressum</a></li>
-                <li class="list-group-item"><a href="https://twitter.com/team_meeteora" target="_blank">@meeteora</a></li>
-            </ul>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <h4>About us</h4>
+                    </li>
+                    <li class="list-group-item"><a href="imprint_de.html">Impressum</a></li>
+                    <li class="list-group-item"><a href="https://twitter.com/team_meeteora" target="_blank">@team_meeteora</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <h4>Developers</h4>
+                    </li>
+                    <li class="list-group-item">Intro</li>
+                    <li class="list-group-item"><a herf="https://beta.meeteora.com/api/doc/" target="_blank">API DOC</a></li>
+                    <li class="list-group-item"><a href="https://github.com/fezde/meeteoraclient" target="_blank">github</a></li>
+                </ul>
+            </div>
         </div>
-        <div class="col">
-            <ul class="list-group">
-                <li class="list-group-item"><h4>Developers</h4></li>
-                <li class="list-group-item">Intro</li>
-                <li class="list-group-item"><a herf="https://beta.meeteora.com/api/doc/" target="_blank">API DOC</a></li>
-                <li class="list-group-item"><a href="https://github.com/fezde/meeteoraclient" target="_blank">github</a></li>
-            </ul>
-        </div>
-    </div>
-</footer>
+    </footer>
     <!-- /.container -->
 
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-     <script
-      src="https://code.jquery.com/jquery-3.3.1.min.js"
-      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-      crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
 
     <script>
-        $(document).ready(function(){
+        $(document).ready(function() {
             $.get('navigation.html', function(template) {
                 //var rendered = Mustache.render(template, {name: "Luke"});
                 $('nav').html(template);
             });
         });
+
     </script>
 </body>
+
 </html>

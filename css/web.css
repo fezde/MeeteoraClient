@@ -106,6 +106,10 @@ footer {
     background: linear-gradient(to bottom, #1B1437 0%, #241b4a 100%);
     /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$from', endColorstr='$to',GradientType=0 ); }
+  .meeteora-navbar .nav-item .nav-link, .meeteora-navbar .nav-item.active .nav-link, .meeteora-navbar .dropdown-item, .meeteora-navbar .nav-item.dropdown .nav-link {
+    color: #F95DE3; }
+  .meeteora-navbar .nav-item .nav-link:hover, .meeteora-navbar .dropdown-item:hover {
+    color: #40D4CD; }
 
 #meeteora-map-btn {
   color: #F95DE3;
