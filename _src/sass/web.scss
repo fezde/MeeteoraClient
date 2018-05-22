@@ -11,9 +11,7 @@ body {
 }
 
 .meeteora_starter {
-
     padding-bottom: 5rem;
-
     min-height: 30vh;
     max-height: 80vh;
     overflow: hidden;
@@ -107,6 +105,11 @@ footer {
     }
     .dropdown-item {
         color: white;
+    }
+    .dropdown-item:hover {
+        @include gradientsimple($COL_METEORA_DARK,
+        lighten($COL_METEORA_DARK,
+        5%));
     }
 }
 
