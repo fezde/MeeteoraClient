@@ -1,7 +1,7 @@
 @import "variables";
 
 body {
-    background-color: $COL_METEORA_DARK;
+    background-color: $COL_MEETEORA_DARK;
     font-family: Barlow, sans-serif;
     color: white;
 }
@@ -18,7 +18,7 @@ body {
     text-align: center;
 
 
-    @include gradient($COL_METEORA_DARK, lighten($COL_METEORA_DARK, 5%), url("../img/meteor-only.png"),
+    @include gradient($COL_MEETEORA_DARK, lighten($COL_MEETEORA_DARK, 5%), url("../img/meteor-only.png"),
     right -320px bottom);
     background-size: 100% auto;
     background-repeat: no-repeat;
@@ -80,8 +80,8 @@ footer {
     text-align: center;
 
 
-    @include gradient(lighten($COL_METEORA_DARK, 5%),
-    $COL_METEORA_DARK,
+    @include gradient(lighten($COL_MEETEORA_DARK, 5%),
+    $COL_MEETEORA_DARK,
     url("../img/meteor-only.png"),
     top left);
     background-size: auto 100%;
@@ -93,13 +93,13 @@ footer {
 }
 
 .meeteora-navbar {
-    //@include gradientsimple($COL_METEORA_DARK, lighten($COL_METEORA_DARK,5%));
+    //@include gradientsimple($COL_MEETEORA_DARK, lighten($COL_MEETEORA_DARK,5%));
     //box-shadow: 0px 0px 10px white;
-    background: $COL_METEORA_DARK;
+    background: $COL_MEETEORA_DARK;
 
     .dropdown-menu {
-        @include gradientsimple($COL_METEORA_DARK,
-        lighten($COL_METEORA_DARK,
+        @include gradientsimple($COL_MEETEORA_DARK,
+        lighten($COL_MEETEORA_DARK,
         5%));
         color: white; //border: 1px solid white;
     }
@@ -107,8 +107,8 @@ footer {
         color: white;
     }
     .dropdown-item:hover {
-        @include gradientsimple($COL_METEORA_DARK,
-        lighten($COL_METEORA_DARK,
+        @include gradientsimple($COL_MEETEORA_DARK,
+        lighten($COL_MEETEORA_DARK,
         5%));
     }
     .nav-item .nav-link, .nav-item.active .nav-link, .dropdown-item, .nav-item.dropdown .nav-link  {
