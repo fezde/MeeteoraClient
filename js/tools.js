@@ -12,6 +12,7 @@ function debug(msg){
             console.log(msg);
             break;
         case "2":
+            $("#debug_output_box").css("display","block");
             console.log(msg);
             $("#debug_output_box").append("<p>" + JSON.stringify(msg) + "</p>");
             break;
