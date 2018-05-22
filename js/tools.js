@@ -12,9 +12,12 @@ function debug(msg){
             console.log(msg);
             break;
         case "2":
-            $("#debug_output_box").css("display","block");
+            var objDiv = $("#debug_output_box");
+            objDiv.css("display","block");
             console.log(msg);
-            $("#debug_output_box").append("<p>" + JSON.stringify(msg) + "</p>");
+            objDiv.append("<p>" + JSON.stringify(msg) + "</p>");
+            //objDiv.append("<p>" + msg.toString() + "</p>");
+            objDiv.scrollTop(objDiv[0].scrollHeight);
             break;
     }
 }

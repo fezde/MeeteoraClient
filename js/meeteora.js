@@ -135,7 +135,7 @@ function loadLocationPermission(){
     },
     function (error) {
 
-        debug("you denied me :-(");
+        debug("Could not get position");
         debug(error);
 
         modal.css("display","block");
