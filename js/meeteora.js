@@ -42,12 +42,13 @@ function loadMapId() {
         } else {
             debug("MapID was set by URL");
             debug("User is joining a map => show info");
-            $("#info .headline").html("You are joining a meeteora map");
-            $("#info .content").html("Some info");
-            $("#info").css("display","block");
-            $("#info .button").click(function(){
+
+            var elem = $("#info_join_map_en");
+            elem.css("display","block");
+
+            $("button", elem).click(function(){
                 debug("click");
-                $("#info").css("display","none");
+                elem.css("display","none");
                 resolve(mapIdFromUrl);
             });
             //
@@ -142,6 +143,7 @@ function loadLocationPermission(){
 
         $("button", modal).click(function(){
             debug("Click");
+            modal.css("display","none");
             loadLocationPermission();
         });
 
