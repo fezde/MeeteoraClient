@@ -12,15 +12,18 @@ function debug(msg){
             console.log(msg);
             break;
         case "2":
-            var objDiv = $("#debug_output_box");
-            objDiv.css("display","block");
+            var content = $("#debug_output_box_content");
+            var container = $("#debug_output_box");
+
+            container.css("display","block");
             console.log(msg);
-            objDiv.append("<p>" + JSON.stringify(msg) + "</p>");
-            //objDiv.append("<p>" + msg.toString() + "</p>");
-            objDiv.scrollTop(objDiv[0].scrollHeight);
+            content.append("<p>" + JSON.stringify(msg) + "</p>");
+            //content.append("<p>" + msg.toString() + "</p>");
+            container.scrollTop(content[0].scrollHeight);
             break;
     }
 }
+
 
 var getUrlParameter = function getUrlParameter(sParam) {
     debug("Trying to get Url Param: " + sParam);

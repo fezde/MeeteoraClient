@@ -96,5 +96,9 @@ button {
     margin: 0;
     padding: 0;
     border-bottom: 1px solid grey; }
+  #debug_output_box button {
+    position: fixed;
+    bottom: 20vh;
+    right: 10px; }
 
 /*# sourceMappingURL=map.css.map */

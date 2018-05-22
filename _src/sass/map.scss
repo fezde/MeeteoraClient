@@ -115,4 +115,9 @@ button{
         padding: 0;
         border-bottom: 1px solid grey;
     }
+    button{
+        position:fixed;
+        bottom: 20vh;
+        right: 10px;
+    }
 }

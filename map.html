@@ -10,21 +10,21 @@
     <link rel="icon" type="image/png" href="img/favicon-200.png" sizes="200x200">
     <link rel="apple-touch-icon-precomposed" sizes="200x200" href="img/favicon-200.png">
     <link href="https://fonts.googleapis.com/css?family=Barlow" rel="stylesheet">
-   <script
-      src="https://code.jquery.com/jquery-3.3.1.min.js"
-      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-      crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <link href="https://fonts.googleapis.com/css?family=Barlow" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/map.css">
 </head>
+
 <body>
     <div id="map">
-        <div class="loading"><h1>
-            Loading map
-        </h1></div>
+        <div class="loading">
+            <h1>
+                Loading map
+            </h1>
+        </div>
     </div>
     <div class="modal error" id="error">
         <div class="headline"> </div>
@@ -66,8 +66,12 @@
     </div>
 
     <div id="debug_output_box">
-        Debug output...
+        <div class="content" id="debug_output_box_content">
+            Debug output...
+        </div>
+
     </div>
+
 
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
     <script src="js/tools.js"></script>
@@ -78,6 +82,8 @@
     <!-- Go to www.addthis.com/dashboard to customize your tools -->
 
     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-59c26918b0ec4303"></script>
+
+
 
 </body>
 </html>
