@@ -28,7 +28,16 @@ function loadMapId() {
             .done(function(data){
                 debug("Got answer for map ID");
                 debug(data);
-                resolve(data.mapid);
+                debug("User is creating a map => show info");
+                var elem = $("#info_create_map_en");
+                elem.css("display","block");
+
+                $("button", elem).click(function(){
+                    debug("click");
+                    elem.css("display","none");
+                    resolve(data.mapid);
+                });
+
             })
             .fail(function(xhr){
                 debug("Error in mapID request");

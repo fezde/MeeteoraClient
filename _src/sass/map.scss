@@ -50,30 +50,48 @@ body {
     background: white;
     border-radius: 15px;
     text-align: center;
+    overflow: scroll;
 
     background-image: url("../img/meteor-only.png");
     background-repeat: no-repeat;
     background-position: top left;
     background-size: 150px;
+
+    .headline {
+        margin: 10px 0 0px 0;
+        color: $COL_MEETEORA_DARK;
+        font-size: 2em;
+        line-height: 1.1em;
+        font-weight: bold;
+        min-height: 60px;
+    }
+
+    .content , .warning{
+        margin: 0 5vw 2em 5vw;
+        text-align: justify;
+    }
+
+    a {
+
+        text-decoration: none;
+        font-weight: bold;
+        color: $COL_MEETEORA_PINK;
+    }
+
+    .buttons a {
+        margin: 0 10px 0 10px;
+    }
+
+    .warning {
+        border: 2px solid $COL_MEETEORA_PINK;
+        border-radius: 10px;
+        p {
+            margin: 5px 10px 5px 10px;
+        }
+    }
+
 }
 
-.modal.error {}
-
-.modal.info {}
-
-.modal .headline {
-    margin: 10px 0 0px 0;
-    color: $COL_MEETEORA_DARK;
-    font-size: 2em;
-    line-height: 1.1em;
-    font-weight: bold;
-    min-height: 60px;
-}
-
-.modal .content {
-    margin: 0 5vw 3em 5vw;
-    text-align: justify;
-}
 
 button {
     display: inline-block;
@@ -88,16 +106,6 @@ button {
     min-width: 30vw;
 }
 
-.modal a {
-
-    text-decoration: none;
-    font-weight: bold;
-    color: $COL_MEETEORA_PINK;
-}
-
-.modal .buttons a {
-    margin: 0 10px 0 10px;
-}
 
 .meeteora_starter {
     font-family: serif;

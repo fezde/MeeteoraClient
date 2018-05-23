@@ -42,22 +42,32 @@ body {
   background: white;
   border-radius: 15px;
   text-align: center;
+  overflow: scroll;
   background-image: url("../img/meteor-only.png");
   background-repeat: no-repeat;
   background-position: top left;
   background-size: 150px; }
-
-.modal .headline {
-  margin: 10px 0 0px 0;
-  color: #1B1437;
-  font-size: 2em;
-  line-height: 1.1em;
-  font-weight: bold;
-  min-height: 60px; }
-
-.modal .content {
-  margin: 0 5vw 3em 5vw;
-  text-align: justify; }
+  .modal .headline {
+    margin: 10px 0 0px 0;
+    color: #1B1437;
+    font-size: 2em;
+    line-height: 1.1em;
+    font-weight: bold;
+    min-height: 60px; }
+  .modal .content, .modal .warning {
+    margin: 0 5vw 2em 5vw;
+    text-align: justify; }
+  .modal a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #F95DE3; }
+  .modal .buttons a {
+    margin: 0 10px 0 10px; }
+  .modal .warning {
+    border: 2px solid #F95DE3;
+    border-radius: 10px; }
+    .modal .warning p {
+      margin: 5px 10px 5px 10px; }
 
 button {
   display: inline-block;
@@ -70,14 +80,6 @@ button {
   padding: .7rem 1rem;
   border-radius: 3px;
   min-width: 30vw; }
-
-.modal a {
-  text-decoration: none;
-  font-weight: bold;
-  color: #F95DE3; }
-
-.modal .buttons a {
-  margin: 0 10px 0 10px; }
 
 .meeteora_starter {
   font-family: serif;
