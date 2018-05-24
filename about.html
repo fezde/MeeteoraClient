@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="@meeteora ()">
+
+    <link rel="icon" type="image/png" href="img/favicon-32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="img/favicon-100.png" sizes="100x100">
+    <link rel="icon" type="image/png" href="img/favicon-200.png" sizes="200x200">
+    <link rel="apple-touch-icon-precomposed" sizes="200x200" href="img/favicon-200.png">
+    <link href="https://fonts.googleapis.com/css?family=Barlow" rel="stylesheet">
+
+    <title>meeteora.com</title>
+
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+    <!-- meeteora css -->
+    <link href="https://fonts.googleapis.com/css?family=Barlow" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/overwrite.css">
+    <link rel="stylesheet" type="text/css" href="css/web.css">
+</head>
+
+
+<body>
+
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top meeteora-navbar"></nav>
+
+    <main role="main" class="container-fluid">
+
+        <div class="row justify-content-center meeteora_first_row">
+            <div class="col-xs-12 col-sm-10">
+                <h1>What is meeteora.com?</h1>
+                <p>
+                    Meetora.com is a location based service that helps you to stay in touch with your friends when you all are travelling. I enables you to share your and their locations so you can see everybody in one joint map.
+                </p>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-xs-12 col-sm-10">
+                <h1>How does it work</h1>
+
+                <div class="row justify-content-center">
+                    <div class="col-xs-12 col-sm-6">
+                        <h2>Prelude</h2>
+                        <p>
+                            Imagine you and your friends want to go somewhere together (for now let's assume a cool festival). And let's be honest: There's nothing like a ride together to a great event somewhere. <br> But you all live in different locations. This means you will have to travel independently from each other. Wouldn't it be cool to know where all the others are while on the move? Wouldn't that at least generate the feeling of a joint travel?
+                        </p>
+                        <p>
+                            And this is where meetora comes into play.
+                        </p>
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                        <p>
+                            Some image here
+                        </p>
+                    </div>
+
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-xs-12 col-sm-6">
+                        <h2>The Beginning</h2>
+                        <p>
+                            You got to meeteora.com and <a href="map.html" target="_blank">start a new meteora map</a>. This will be your virtual convoy, your coach, your online car that you can use to stay in touch with each other.
+                        </p>
+                        <p>
+                            On this map you will see you and all the friends that are travelling with you.
+                        </p>
+                        <p>
+                            <script src="js/meeteora-button.js"></script>
+                        </p>
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                        <p>
+                            Some image here
+                        </p>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-xs-12 col-sm-6">
+                        <h2>The Invitations</h2>
+                        <p>
+                            Now make heavy use of the sharing button you find on the bottom left of the map. Invite all your friends over to this map.
+                        </p>
+                        <p>
+                            As soon as they join the map, you all will see each other. Now it's time to travel together and meet at the festival! <br>
+                            Btw.: Joining the map is as easy as opening the link you sent them in their browser. Ther is no APP or login required.
+                        </p>
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                        <p>
+                            Some image here
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <footer role="footer" class="container-fluid"></footer>
+    <!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function() {
+            $.get('navigation.html', function(template) {
+                //var rendered = Mustache.render(template, {name: "Luke"});
+                $('nav').html(template);
+            });
+            $.get('footer.html', function(template) {
+                //var rendered = Mustache.render(template, {name: "Luke"});
+                $('footer').html(template);
+            });
+        });
+    </script>
+</body>
+
+</html>
