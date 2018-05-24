@@ -1,0 +1,22 @@
+.meeteora-button {
+  border: 2px solid #F95DE3;
+  background: #1B1437;
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  font-size: 20px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out; }
+
+.meeteora-button:hover {
+  background: #40D4CD;
+  border-color: #40D4CD;
+  color: #1B1437; }
+
+.meeteora-button img {
+  fill: red; }
+
+/*# sourceMappingURL=meeteora-button.css.map */
