@@ -1,3 +1,7 @@
 # Created by .ignore support plugin (hsz.mobi)
 .idea/*
 .brackets.json
+
+node_modules/*
+
+*/*.xcf
