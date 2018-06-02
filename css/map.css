@@ -69,6 +69,21 @@ body {
     .modal .warning p {
       margin: 5px 10px 5px 10px; }
 
+.meeteora-menu {
+  background: #1B1437;
+  color: #F95DE3;
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+  text-align: center;
+  display: block; }
+  .meeteora-menu i {
+    line-height: 46px !important;
+    margin-top: 2px;
+    margin-left: 4px;
+    display: inline-block;
+    text-align: center; }
+
 button {
   display: inline-block;
   background: #1B1437;

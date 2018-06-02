@@ -126,4 +126,8 @@ footer {
   max-height: 300px;
   max-width: 300px; }
 
+#about-prelude-carousel {
+  width: 300px;
+  min-width: 300px; }
+
 /*# sourceMappingURL=web.css.map */

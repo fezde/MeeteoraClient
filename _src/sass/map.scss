@@ -92,6 +92,24 @@ body {
 
 }
 
+.meeteora-menu{
+    background: $COL_MEETEORA_DARK;
+    color: $COL_MEETEORA_PINK;
+
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    text-align: center;
+
+    display: block;
+    i{
+        line-height: 46px !important;
+        margin-top: 2px;
+        margin-left: 4px;
+        display: inline-block;
+          text-align: center;
+    }
+}
 
 button {
     display: inline-block;

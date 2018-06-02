@@ -1,0 +1,22 @@
+{
+  "base": "",
+  "paths": {
+    "source": {
+      "config": "_src/semantic-ui/src/theme.config",
+      "definitions": "_src/semantic-ui/src/definitions/",
+      "site": "_src/semantic-ui/src/site/",
+      "themes": "_src/semantic-ui/src/themes/"
+    },
+    "output": {
+      "packaged": "libs/semanticui/",
+      "uncompressed": "libs/semanticui/components/",
+      "compressed": "libs/semanticui/components/",
+      "themes": "libs/semanticui/themes/"
+    },
+    "clean": "libs/semanticui/"
+  },
+  "permission": false,
+  "autoInstall": false,
+  "rtl": false,
+  "version": "2.3.1"
+}

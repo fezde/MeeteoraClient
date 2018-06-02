@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
+    <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+</head>
+
+<body>
+    <ons-page>
+        <ons-speed-dial position="top left" direction="down">
+            <ons-fab>
+                <ons-icon icon="md-menu"></ons-icon>
+            </ons-fab>
+
+            <ons-speed-dial-item  onclick="dialogNameShow()">
+                <ons-icon icon="md-edit"></ons-icon>
+            </ons-speed-dial-item>
+
+        </ons-speed-dial>
+
+    </ons-page>
+
+
+
+    <!-- Dialog -->
+    <template id="dialog_name_template">
+        <ons-alert-dialog cancelable rowfooter id="dialog_name">
+            <div class="alert-dialog-title">
+                <h1>Set your name</h1>
+            </div>
+
+            <div class="alert-dialog-content">
+                Please set the name which you want to be shown as on the map
+                <p>
+                    <label for="username">Your Username</label><br>
+                    <ons-input
+                        id="username"
+                        input-id="username"
+                        placeholder="Username"
+                        modifier="underbar"
+                        float
+                        type="text"
+                        requried
+                        minlength="2"
+                        maxlength="5">
+                    </ons-input>
+                </p>
+            </div>
+
+            <div class="alert-dialog-footer">
+                <ons-alert-dialog-button ripple onclick="dialogNameHide()">Cancel</ons-alert-dialog-button>
+                <ons-alert-dialog-button ripple onclick="dialogNameOk()">OK</ons-alert-dialog-button>
+            </div>
+        </ons-alert-dialog>
+    </template>
+
+
+    <script src="/js/meeteora-ui.js"></script>
+</body>
+</html>

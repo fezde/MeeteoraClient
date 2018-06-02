@@ -1,0 +1,13 @@
+/*******************************
+     User Global Variables
+*******************************/
+
+
+
+@black: #1B1437; // $COL_MEETEORA_DARK
+@pink: #F95DE3; // $COL_MEETEORA_PINK
+@teal: #40D4CD; // $COL_MEETEORA_TURQUOISE
+
+
+@primaryColor   : #F95DE3; // @pink
+@secondaryColor : #40D4CD; // @teal
