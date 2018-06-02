@@ -1,18 +1,35 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meeteora</title>
 
+    <link rel="icon" type="image/png" href="img/favicon-32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="img/favicon-100.png" sizes="100x100">
+    <link rel="icon" type="image/png" href="img/favicon-200.png" sizes="200x200">
+    <link rel="apple-touch-icon-precomposed" sizes="200x200" href="img/favicon-200.png">
+    <link href="https://fonts.googleapis.com/css?family=Barlow" rel="stylesheet">
     <script src="libs/jquery/jquery.min.js"></script>
 
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <link rel="stylesheet" type="text/css" href="libs/semanticui/semantic.min.css">
-    <script src="libs/semanticui/semantic.min.js"></script>
+
+
+    <link href="https://fonts.googleapis.com/css?family=Barlow" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/overwrite.css">
     <link rel="stylesheet" type="text/css" href="css/map.css">
 </head>
 
 <body>
-    <div class="ui button primary" id="testbutton">
-        <i class="icon edit large fitted "></i></div>
-    <br/>
+    <div id="map">
+        <div class="loading">
+            <h1>
+                Loading map
+            </h1>
+        </div>
+    </div>
 
     <div class="ui  dropdown">
 
@@ -28,7 +45,110 @@
     </div>
 
 
+    <div class="modal error" id="error">
+        <div class="headline"> </div>
+        <p class="content"></p>
+    </div>
 
+    <div class="modal error" id="error_mapid_en">
+        <div class="headline">
+            Network Error
+        </div>
+        <div class="content">
+            <p>
+                We tried to get a new map-ID for you. But something went terribly wrong.
+            </p>
+            <p>
+                Please ensure that your internet connection is up and running and <a onclick="location.reload();">reload this page</a>.
+            </p>
+        </div>
+    </div>
+
+    <div class="modal error" id="error_userid_en">
+        <div class="headline">
+            Network Error
+        </div>
+        <div class="content">
+            <p>
+                We tried to get a new user-ID for you. But something went terribly wrong.
+            </p>
+            <p>
+                Please ensure that your internet connection is up and running and <a onclick="location.reload();">reload this page</a>.
+            </p>
+        </div>
+    </div>
+
+    <div class="modal info" id="info_create_map_en">
+        <div class="headline">
+            You are starting a meeteora map
+        </div>
+        <div class="content">
+            <p>
+                First thing you will see is your new map and you on this map.
+            </p>
+            <p>
+                You may then change your display name and then invite others to join you on this map.
+            </p>
+
+        </div>
+        <div class="buttons">
+            <a href="about.html" target="_blank">How it works</a>
+            <a href="dataprotection.html" target="_blank">Data Protection?</a>
+            <p>
+                <button>Start now!</button>
+            </p>
+        </div>
+        <div class="warning">
+            <p>
+                <strong>Please note</strong>: This application will store some data about you in cookies and in its database. Only join when this is okay for you. <a href="dataprotection.html" target="_blank">[Details]</a>
+            </p>
+        </div>
+    </div>
+
+    <div class="modal info" id="info_join_map_en">
+        <div class="headline">
+            You are joining a meeteora map
+        </div>
+        <div class="content">
+            <p>
+                You were invited to join this meeteora map. This means that the person who sent you this link wants to show you where he or she currently is and also wants to know where you are.
+            </p>
+            <p>
+                If you join this map (button below) you will see where all other people who also joined this map are currently located.
+            </p>
+
+        </div>
+        <div class="buttons">
+            <a href="index.html" target="_blank">About meeteora</a>
+            <a href="dataprotection.html" target="_blank">Data Protection?</a>
+            <p>
+                <button>Join</button>
+            </p>
+        </div>
+        <div class="warning">
+            <p>
+                <strong>Please note</strong>: This application will store some data about you in cookies and in its database. Only join when this is okay for you. <a href="dataprotection.html" target="_blank">[Details]</a>
+            </p>
+        </div>
+    </div>
+
+    <div class="modal info" id="info_permission_required_en">
+        <div class="headline">
+            Location permission required
+        </div>
+        <div class="content">
+            <p>As meeteora is a location based service we need permission to access your current <strong>location</strong>. <a href="dataprotection.html" #locationpermission target="_blank">[more...]</a></p>
+            <p>By now your browser should have asked you to grant acces to your current permission. Please accept this permission and hit the retry button below.</p>
+        </div>
+        <div class="buttons">
+            <a href="about.html" target="_blank">About meeteora</a>
+            <a href="dataprotection.html#locationpermission" target="_blank">Location Permission?</a>
+            <a href="dataprotection.html" target="_blank">Data Protection!</a>
+            <p>
+                <button>Retry</button>
+            </p>
+        </div>
+    </div>
 
     <div class="ui basic modal" id="username-modal">
         <div class="header">Set your username</div>
@@ -49,11 +169,33 @@
             <div class="ui actions approve button pink">Approve</div>
         </div>
     </div>
+
+    <div id="debug_output_box">
+        <div class="content" id="debug_output_box_content">
+            Debug output...
+        </div>
+
+    </div>
+
+
+    <script src="libs/semanticui/semantic.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+    <script src="js/globals.js"></script>
+    <script src="js/tools.js"></script>
+    <script src="js/map.js"></script>
     <script src="js/meeteora-ui.js"></script>
-    <script>
+    <script src="js/meeteora.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZBoTd4MV-dyqicuLP2sgNBNp9_bFki3I&callback=googleApiLoaded" async defer></script>
+
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-59c26918b0ec4303"></script>
 
 
-    </script>
+
 </body>
-
 </html>
+
+
+
+

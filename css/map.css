@@ -124,4 +124,9 @@ button {
     bottom: 20vh;
     right: 10px; }
 
+#meeteora-menu {
+  position: absolute;
+  top: 10px;
+  left: 10px; }
+
 /*# sourceMappingURL=map.css.map */

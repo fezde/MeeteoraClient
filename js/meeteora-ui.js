@@ -1,9 +1,11 @@
 function initUi() {
+    debug("Init UI");
     initUsername();
     initMenu();
 }
 
 function initMenu() {
+    debug("init Menu");
     $('.ui.dropdown').dropdown({
         transition: 'drop'
     });
