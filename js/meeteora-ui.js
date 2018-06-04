@@ -1,7 +1,18 @@
 function initUi() {
     debug("Init UI");
-    initUsername();
+    initModals();
+    initUsernameModal();
     initMenu();
+}
+
+/**
+* Inits the general Modals
+**/
+function initModals(){
+    $('.ui.modal').modal("setting", {
+        //detachable: false,
+        closable: false,
+    });
 }
 
 function initMenu() {
@@ -11,7 +22,7 @@ function initMenu() {
     });
 }
 
-function initUsername() {
+function initUsernameModal() {
     $(".username-button").click(function () {
         $('#username-modal').modal('show');
     });
@@ -44,7 +55,6 @@ function initUsername() {
             on: 'blur',
             inline: true,
             fields: {
-
                 username: ['minLength[2]', 'maxLength[5]', 'empty']
             }
         });

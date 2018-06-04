@@ -32,6 +32,19 @@ body {
   text-align: center; }
 
 .modal {
+  color: #1B1437; }
+  .modal .header {
+    background-image: url("../img/meteor-only.png") !important;
+    background-repeat: no-repeat  !important;
+    background-position: top right -70px  !important;
+    background-size: 150px  !important; }
+  .modal .warning {
+    border: 2px solid #F95DE3;
+    border-radius: 10px; }
+    .modal .warning p {
+      margin: 5px 10px 5px 10px; }
+
+.modal-remove-me {
   color: #1B1437;
   width: 90vw;
   height: 90vh;
@@ -42,32 +55,19 @@ body {
   background: white;
   border-radius: 15px;
   text-align: center;
-  overflow: scroll;
-  background-image: url("../img/meteor-only.png");
-  background-repeat: no-repeat;
-  background-position: top left;
-  background-size: 150px; }
-  .modal .headline {
+  overflow: scroll; }
+  .modal-remove-me .headline {
     margin: 10px 0 0px 0;
     color: #1B1437;
     font-size: 2em;
     line-height: 1.1em;
     font-weight: bold;
     min-height: 60px; }
-  .modal .content, .modal .warning {
+  .modal-remove-me .content, .modal-remove-me .warning {
     margin: 0 5vw 2em 5vw;
     text-align: justify; }
-  .modal a {
-    text-decoration: none;
-    font-weight: bold;
-    color: #F95DE3; }
-  .modal .buttons a {
+  .modal-remove-me .buttons a {
     margin: 0 10px 0 10px; }
-  .modal .warning {
-    border: 2px solid #F95DE3;
-    border-radius: 10px; }
-    .modal .warning p {
-      margin: 5px 10px 5px 10px; }
 
 .meeteora-menu {
   background: #1B1437;

@@ -41,6 +41,25 @@ body {
 
 .modal {
     color: $COL_MEETEORA_DARK;
+    .header{
+        background-image: url("../img/meteor-only.png") !important;
+        background-repeat: no-repeat  !important;
+        background-position: top right -70px  !important;
+        background-size: 150px  !important;
+    }
+    .warning {
+        border: 2px solid $COL_MEETEORA_PINK;
+        border-radius: 10px;
+        p {
+            margin: 5px 10px 5px 10px;
+        }
+    }
+
+
+}
+
+.modal-remove-me {
+    color: $COL_MEETEORA_DARK;
     width: 90vw;
     height: 90vh;
     display: none;
@@ -52,10 +71,7 @@ body {
     text-align: center;
     overflow: scroll;
 
-    background-image: url("../img/meteor-only.png");
-    background-repeat: no-repeat;
-    background-position: top left;
-    background-size: 150px;
+
 
     .headline {
         margin: 10px 0 0px 0;
@@ -71,24 +87,13 @@ body {
         text-align: justify;
     }
 
-    a {
 
-        text-decoration: none;
-        font-weight: bold;
-        color: $COL_MEETEORA_PINK;
-    }
 
     .buttons a {
         margin: 0 10px 0 10px;
     }
 
-    .warning {
-        border: 2px solid $COL_MEETEORA_PINK;
-        border-radius: 10px;
-        p {
-            margin: 5px 10px 5px 10px;
-        }
-    }
+
 
 }
 
