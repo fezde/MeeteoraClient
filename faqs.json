@@ -1,0 +1,32 @@
+[
+    {
+        "id": "0001",
+        "question": "some question",
+        "answer": "<p>First paragraph</p><p>Second paragraph</p>",
+        "tags": [
+            "iphone", "ipad", "location", "settings"
+        ]
+    },
+    {
+        "id": "0002",
+        "question": "222some question",
+        "answer": [
+            "<p>First paragraph</p>",
+            "<p>Second paragraph</p>"
+        ],
+        "tags": [
+            "test", "test", "test2", "test"
+        ]
+    },
+    {
+        "id": "0003",
+        "question": "How do I activate location access on my iPhone/iPad?",
+        "answer": [
+            "intro",
+            "To solve this you most probably need to change the general settings of your device. You can find the required steps here: <a href='https://support.apple.com/en-au/HT207092' target='_blank'>https://support.apple.com/en-au/HT207092</a>"
+        ],
+        "tags": [
+            "iphone","ipad", "settings", "location","permission"
+        ]
+    }
+]
