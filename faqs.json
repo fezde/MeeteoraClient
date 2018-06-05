@@ -22,7 +22,7 @@
         "id": "0003",
         "question": "How do I activate location access on my iPhone/iPad?",
         "answer": [
-            "intro",
+            "Sometimes iPhones do not ask for permission to access your location. This will break meeteora for you. In most cases this is because your phone is configured in a way that generally prohibits the browser from accessing your location.",
             "To solve this you most probably need to change the general settings of your device. You can find the required steps here: <a href='https://support.apple.com/en-au/HT207092' target='_blank'>https://support.apple.com/en-au/HT207092</a>"
         ],
         "tags": [

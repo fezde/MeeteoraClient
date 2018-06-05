@@ -32,9 +32,24 @@
     <main role="main" class="container-fluid">
 
         <div class="row meeteora_first_row justify-content-center">
-            <div class="col-sm-11 col-md-5 col-lg-3" >
-            FAQs
+            <div class="col-sm-11 col-md-5 col-lg-3">
+                <h1>Meeteora FAQs</h1>
+                <label for="faqSearchInput">Search for a topic</label>
+                <div class="input-group">
+
+                    <input type="text" class="form-control" id="faqSearchInput" placeholder="FAQ Topic" aria-describedby="inputGroupAppend" required>
+                    <div class="input-group-append">
+
+                        <span class="input-group-text" id="inputGroupPrepend">
+                            Search
+                        </span>
+                    </div>
+                    <div class="invalid-feedback">
+                        Please choose a username.
+                    </div>
+                </div>
             </div>
+        </div>
         </div>
         <div class="row justify-content-center" id="faq_container">
 
@@ -64,18 +79,19 @@
             <div class="card faq">
                 <div class="card-header">
                     <a href="#" data-toggle="collapse" data-target=".faq-{{id}}">
-                    {{question}}
-                </a>
+                        {{question}}
+                        <div class="float-right">icon</div>
+                    </a>
+
                 </div>
                 <div class="card-body collapse faq-{{id}}">
                     {{#answer}}
-                        <p>{{{.}}}</p>
+                    <p>{{{.}}}</p>
                     {{/answer}}
                 </div>
                 <div class="card-footer">
                     {{#tags}}
-                        <span class="badge badge-secondary">{{.}}</span>
-                    {{/tags}}
+                    <span class="badge badge-secondary">{{.}}</span> {{/tags}}
 
 
                 </div>
@@ -97,6 +113,7 @@
             faqsLoad();
 
         });
+
     </script>
 </body>
 
