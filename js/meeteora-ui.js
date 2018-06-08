@@ -43,11 +43,13 @@ function initUsernameModal() {
                 $("#username").focus();
                 return false;
             }
-            //TODO save name to cookie
+            var tmp = $("#username").val();
+            debug("Username shall be changed to: " + tmp);
+            userName = tmp;
+            saveName();
         },
         onShow: function () {
-            //TODO set name from Cookie
-            $("#username").val(new Date());
+            $("#username").val(loadName());
         },
     });
 

@@ -129,6 +129,11 @@ function loadUserId() {
         });
 }
 
+function saveName(){
+    Cookies.set(COOKIE_NAME_NAME, userName);
+    debug("User Name has been saved to cookie");
+}
+
 function loadName() {
     var name = Cookies.get(COOKIE_NAME_NAME);
     debug("Name from cookie: " + name);
@@ -139,7 +144,8 @@ function loadName() {
     }
     debug("Name is: " + name);
     userName = name;
-    Cookies.set(COOKIE_NAME_NAME, name);
+    saveName();
+    return name;
 }
 
 function loadLocationPermission() {
@@ -249,7 +255,7 @@ function positionsRender(data) {
     for (var i = 0; i < users.length; i++) {
         debug("User " + i);
         var usr = users[i];
-        markersAdd(usr.lat, usr.lng, usr.name);
+        markersAdd(usr.lat, usr.lng, usr.name, usr.age);
     }
     fitBoundsToVisibleMarkers();
     window.setTimeout(updateMyPosition, 5000);
