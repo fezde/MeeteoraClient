@@ -12,6 +12,14 @@ function initModals(){
     $('.ui.modal').modal("setting", {
         //detachable: false,
         closable: false,
+        onShow: function () {
+            debug("Some modal is showing");
+
+        },
+        onHide: function () {
+            debug("Some modal is hiding");
+
+        },
     });
 }
 
@@ -20,6 +28,15 @@ function initMenu() {
     $('.ui.dropdown').dropdown({
         transition: 'drop'
     });
+}
+
+function menusHide(){
+    $("#meeteora-menu").hide();
+    $(".at-expanding-share-button-toggle").hide();
+}
+function menusShow(){
+    $("#meeteora-menu").show();
+    $(".at-expanding-share-button-toggle").show();
 }
 
 function initUsernameModal() {
@@ -35,7 +52,7 @@ function initUsernameModal() {
         closable: false,
         onDeny: function () {
             console.log("Deny / Cancel");
-
+            menusShow();
         },
         onApprove: function () {
             var formValid = $('#username-form').form('is valid');
@@ -47,8 +64,10 @@ function initUsernameModal() {
             debug("Username shall be changed to: " + tmp);
             userName = tmp;
             saveName();
+            menusShow();
         },
         onShow: function () {
+            menusHide();
             $("#username").val(loadName());
         },
     });
