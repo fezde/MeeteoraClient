@@ -28,7 +28,7 @@ function initMap(position) {
         disableDefaultUI: true
     });
     debug("Map sollte da sein");
-    markersAdd(position.coords.latitude, position.coords.longitude, userName);
+    markersAdd(position.coords.latitude, position.coords.longitude, userName, 0);
     debug("you where added");
 }
 
@@ -40,7 +40,8 @@ function markersRemoveAll() {
 }
 
 
-function markersAdd(lat, lng, name) {
+function markersAdd(lat, lng, name, age) {
+
     var pos = {
         lat: lat,
         lng: lng
@@ -53,20 +54,25 @@ function markersAdd(lat, lng, name) {
         anchor: new google.maps.Point(27, 25) // anchor
     };
 
-    var marker = new google.maps.Marker({
-        position: pos,
-        map: map,
-        label: name,
-        icon: icon
-    });
-    markers.push(marker);
+    var opacity = 1.0;
+    var fifteenMins = 15.0 * 60.0;
+    if(age < fifteenMins ){
+        debug("Adding marker for user " + name);
+        if(age > 120){
+            opacity = (fifteenMins-age) / fifteenMins;
+        }
 
-//    marker = new google.maps.Marker({
-//        position: pos,
-//        map: map,
-//        label: name,
-//    });
-//    markers.push(marker);
+        var marker = new google.maps.Marker({
+            position: pos,
+            map: map,
+            label: name,
+            icon: icon,
+            opacity: opacity,
+        });
+        markers.push(marker);
+    }
+
+
 }
 
 function fitBoundsToVisibleMarkers() {
