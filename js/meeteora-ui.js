@@ -23,7 +23,9 @@ function initMenu() {
 }
 
 function initUsernameModal() {
+    debug("initUsernameModal");
     $(".username-button").click(function () {
+        debug("Click");
         $('#username-modal').modal('show');
     });
 

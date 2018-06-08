@@ -97,37 +97,7 @@ body {
 
 }
 
-.meeteora-menu{
-    background: $COL_MEETEORA_DARK;
-    color: $COL_MEETEORA_PINK;
 
-    height: 50px;
-    width: 50px;
-    border-radius: 100%;
-    text-align: center;
-
-    display: block;
-    i{
-        line-height: 46px !important;
-        margin-top: 2px;
-        margin-left: 4px;
-        display: inline-block;
-          text-align: center;
-    }
-}
-
-button {
-    display: inline-block;
-    background: $COL_MEETEORA_DARK;
-    border: none;
-    color: $COL_MEETEORA_PINK;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: .95rem;
-    padding: .7rem 1rem;
-    border-radius: 3px;
-    min-width: 30vw;
-}
 
 
 .meeteora_starter {
