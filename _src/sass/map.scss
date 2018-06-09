@@ -41,61 +41,37 @@ body {
 
 .modal {
     color: $COL_MEETEORA_DARK;
-    .header{
+    .header {
         background-image: url("../img/meteor-only.png") !important;
-        background-repeat: no-repeat  !important;
-        background-position: top right -40px  !important;
-        background-size: auto 100%  !important;
+        background-repeat: no-repeat !important;
+        background-position: top right -40px !important;
+        background-size: auto 100% !important;
     }
     .warning {
         border: 2px solid $COL_MEETEORA_PINK;
+    }
+
+    .info {
+        border: 2px solid $COL_MEETEORA_TURQUOISE;
+    }
+    .info a{
+        margin-right: 10px;
+        //color: $COL_MEETEORA_TURQUOISE;
+    }
+
+    div.info + div.warning {
+        margin-top: 10px;
+    }
+    .warning,
+    .info {
         border-radius: 10px;
         p {
             margin: 5px 10px 5px 10px;
         }
     }
-
-
 }
 
-.modal-remove-me {
-    color: $COL_MEETEORA_DARK;
-    width: 90vw;
-    height: 90vh;
-    display: none;
-    position: absolute;
-    top: 5vh;
-    left: 5vw;
-    background: white;
-    border-radius: 15px;
-    text-align: center;
-    overflow: scroll;
 
-
-
-    .headline {
-        margin: 10px 0 0px 0;
-        color: $COL_MEETEORA_DARK;
-        font-size: 2em;
-        line-height: 1.1em;
-        font-weight: bold;
-        min-height: 60px;
-    }
-
-    .content , .warning{
-        margin: 0 5vw 2em 5vw;
-        text-align: justify;
-    }
-
-
-
-    .buttons a {
-        margin: 0 10px 0 10px;
-    }
-
-
-
-}
 
 
 
