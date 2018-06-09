@@ -53,6 +53,9 @@ body {
     .modal .info p {
       margin: 5px 10px 5px 10px; }
 
+#username-modal .content {
+  min-height: 210px; }
+
 .meeteora_starter {
   font-family: serif;
   color: red; }
