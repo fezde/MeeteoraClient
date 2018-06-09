@@ -10,10 +10,13 @@
     <link rel="icon" type="image/png" href="img/favicon-200.png" sizes="200x200">
     <link rel="apple-touch-icon-precomposed" sizes="200x200" href="img/favicon-200.png">
     <link href="https://fonts.googleapis.com/css?family=Barlow" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="libs/jquery/jquery.min.js"></script>
 
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" type="text/css" href="libs/semanticui/semantic.min.css">
+
+
     <link href="https://fonts.googleapis.com/css?family=Barlow" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/overwrite.css">
     <link rel="stylesheet" type="text/css" href="css/map.css">
@@ -27,30 +30,44 @@
             </h1>
         </div>
     </div>
-    <div class="modal error" id="error">
-        <div class="headline"> </div>
-        <p class="content"></p>
+
+    <div class="ui icon buttons large" id="meeteora-menu">
+        <div class="ui top left pointing dropdown button circular black">
+            <i class="bars icon"></i>
+            <div class="menu ui">
+                <div class="item">
+                    <a href="#" class="username-button">
+                        <i class="icon edit fitted"></i> Change name
+                    </a>
+                </div>
+
+            </div>
+        </div>
     </div>
 
-   <div class="modal error" id="error_mapid_en">
-        <div class="headline">
+
+    <div class="ui modal error" id="error_mapid_en">
+        <div class="header">
             Network Error
         </div>
-        <div class="content">
+        <div class="scrolling content">
             <p>
                 We tried to get a new map-ID for you. But something went terribly wrong.
             </p>
             <p>
-                Please ensure that your internet connection is up and running and <a onclick="location.reload();">reload this page</a>.
+                Please ensure that your internet connection is up and running and <a onclick="">reload this page</a>.
             </p>
+        </div>
+        <div class="actions">
+            <button class="ui actions approve button pink">Retry / Reload</button>
         </div>
     </div>
 
-    <div class="modal error" id="error_userid_en">
-        <div class="headline">
+    <div class="ui modal error" id="error_userid_en">
+        <div class="header">
             Network Error
         </div>
-        <div class="content">
+        <div class="scrolling content">
             <p>
                 We tried to get a new user-ID for you. But something went terribly wrong.
             </p>
@@ -58,77 +75,108 @@
                 Please ensure that your internet connection is up and running and <a onclick="location.reload();">reload this page</a>.
             </p>
         </div>
+        <div class="actions">
+            <button class="ui actions approve button pink">Retry / Reload</button>
+        </div>
     </div>
 
-   <div class="modal info" id="info_create_map_en">
-        <div class="headline">
+    <div class="ui modal info" id="info_create_map_en">
+        <div class="header">
             You are starting a meeteora map
         </div>
-        <div class="content">
+        <div class="scrolling content">
             <p>
                 First thing you will see is your new map and you on this map.
             </p>
             <p>
                 You may then change your display name and then invite others to join you on this map.
             </p>
+            <div class="info"><p>
+                <a href="about.html" target="_blank">How it works</a>
+                <a href="dataprotection.html" target="_blank">Data Protection?</a>
+            </p></div>
+            <div class="warning">
+                <p>
+                    <strong>Please note</strong>: This application will store some data in cookies and in its database. Only join when this is okay for you. <a href="dataprotection.html" target="_blank">[Details]</a>
+                </p>
+            </div>
+        </div>
+        <div class="actions">
+
+
+            <button class="ui actions approve button pink">Start now!</button>
 
         </div>
-        <div class="buttons">
-            <a href="about.html" target="_blank">How it works</a>
-            <a href="dataprotection.html" target="_blank">Data Protection?</a>
-            <p>
-                <button>Start now!</button>
-            </p>
-        </div>
-        <div class="warning">
-           <p>
-            <strong>Please note</strong>: This application will store some data about you in cookies and in its database. Only join when this is okay for you. <a href="dataprotection.html" target="_blank">[Details]</a>
-            </p>
-        </div>
+
     </div>
 
-    <div class="modal info" id="info_join_map_en">
-        <div class="headline">
+    <div class="ui modal info" id="info_join_map_en">
+        <div class="header">
             You are joining a meeteora map
         </div>
-        <div class="content">
+        <div class="scrolling content">
             <p>
                 You were invited to join this meeteora map. This means that the person who sent you this link wants to show you where he or she currently is and also wants to know where you are.
             </p>
             <p>
                 If you join this map (button below) you will see where all other people who also joined this map are currently located.
             </p>
+            <div class="warning">
+                <p>
+                    <strong>Please note</strong>: This application will store some data about you in cookies and in its database. Only join when this is okay for you. <a href="dataprotection.html" target="_blank">[Details]</a>
+                </p>
+            </div>
+            <p>
+                <a href="index.html" target="_blank">About meeteora</a>
+                <a href="dataprotection.html" target="_blank">Data Protection?</a>
+            </p>
+        </div>
+        <div class="actions">
+
+
+            <button class="ui actions approve button pink">Join</button>
 
         </div>
-        <div class="buttons">
-            <a href="index.html" target="_blank">About meeteora</a>
-            <a href="dataprotection.html" target="_blank">Data Protection?</a>
-            <p>
-                <button>Join</button>
-            </p>
+
+    </div>
+
+    <div class="ui modal info" id="info_permission_required_en">
+        <div class="header">
+            Location permission required
         </div>
-        <div class="warning">
-           <p>
-            <strong>Please note</strong>: This application will store some data about you in cookies and in its database. Only join when this is okay for you. <a href="dataprotection.html" target="_blank">[Details]</a>
-            </p>
+        <div class="scrolling content">
+            <p>As meeteora is a location based service we need permission to access your current <strong>location</strong>. <a href="dataprotection.html" #locationpermission target="_blank">[more...]</a></p>
+            <p>By now your browser should have asked you to grant acces to your current permission. Please accept this permission and hit the retry button below.</p>
+            <div class="info"><p>
+                <a href="about.html" target="_blank">About meeteora</a>
+                <a href="dataprotection.html#locationpermission" target="_blank">Location Permission?</a>
+                <a href="dataprotection.html" target="_blank">Data Protection!</a>
+            </p></div>
+        </div>
+        <div class="actions">
+
+
+            <button class="ui actions approve button pink">Retry</button>
+
         </div>
     </div>
 
-    <div class="modal info" id="info_permission_required_en">
-        <div class="headline">
-            Location permission required
-        </div>
+    <div class="ui basic modal" id="username-modal">
+        <div class="header">Set your username</div>
         <div class="content">
-            <p>As meeteora is a location based service we need permission to access your current <strong>location</strong>. <a href="dataprotection.html"#locationpermission target="_blank">[more...]</a></p>
-            <p>By now your browser should have asked you to grant acces to your current permission. Please accept this permission and hit the retry button below.</p>
+            <form class="ui form" id="username-form" onsubmit="return false;">
+                <div class="field">
+                    <label>Username (2 to 5 characters)</label>
+                    <input id="username" type="text" placeholder="Search...">
+                </div>
+
+            </form>
         </div>
-        <div class="buttons">
-            <a href="about.html" target="_blank">About meeteora</a>
-            <a href="dataprotection.html#locationpermission" target="_blank">Location Permission?</a>
-            <a href="dataprotection.html" target="_blank">Data Protection!</a>
-            <p>
-                <button>Retry</button>
-            </p>
+        <div class="actions">
+
+
+            <div class="ui actions cancel button">Cancel</div>
+            <div class="ui actions approve button pink">Approve</div>
         </div>
     </div>
 
@@ -140,10 +188,12 @@
     </div>
 
 
+    <script src="libs/semanticui/semantic.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
     <script src="js/globals.js"></script>
     <script src="js/tools.js"></script>
     <script src="js/map.js"></script>
+    <script src="js/meeteora-ui.js"></script>
     <script src="js/meeteora.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZBoTd4MV-dyqicuLP2sgNBNp9_bFki3I&callback=googleApiLoaded" async defer></script>
 
@@ -155,3 +205,7 @@
 
 </body>
 </html>
+
+
+
+
