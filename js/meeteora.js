@@ -49,7 +49,7 @@ function loadMapId() {
                     });
 
             } else {
-                //TODO validate map id before we show something here
+                //FUTURE validate map id before we show something here
                 debug("MapID was set by URL");
                 debug("User is joining a map => show info");
 
